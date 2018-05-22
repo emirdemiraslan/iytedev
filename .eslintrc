@@ -1,0 +1,39 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": ["babel"],
+  "extends": ["airbnb/base"],
+  "env": {
+    "browser": true,
+    "jquery": true,
+    "es6": true
+  },
+  "globals": {
+    "Promise": true
+  },
+  "rules": {
+    "indent": [2, "tab", {"SwitchCase": 1}],
+    "comma-dangle": 0,
+    "no-tabs": 0,
+    "import/no-extraneous-dependencies": 0,
+    "linebreak-style": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        extensions: [
+          ".js",
+          ".jsx"
+        ],
+        moduleDirectory: [
+          "node_modules",
+          "bower_components"
+        ]
+      },
+      "webpack"
+    }
+  }
+}

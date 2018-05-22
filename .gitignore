@@ -1,0 +1,5 @@
+node_modules
+bower_components
+wpcs
+*.log
+.DS_Store
