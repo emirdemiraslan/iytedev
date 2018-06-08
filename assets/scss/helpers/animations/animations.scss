@@ -1,0 +1,28 @@
+//vars
+$quick_tr: 0.4s easing('outExpo');
+$medium_tr: 0.6s easing('outExpo');
+
+//ANIMATIONS
+
+@mixin keyframes($animation-name) {
+    
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  animation: #{$str};      
+}
+
+//fall and fall
+
+@include keyframes(theFall) {
+    0% {top:50%}
+    25% {blur:5px}
+    50% {top:150%}
+    50.01% {top:-150%}
+    75% {blur:0px}
+    100% {top:50%}
+    
+}
