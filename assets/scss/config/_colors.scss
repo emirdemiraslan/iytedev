@@ -27,6 +27,17 @@ $c_red: #f00;
 
 $c_green: #0f0;
 
+$c_brand: #9A1220;
+$c_brand_dark: #740E18;
+
+$c_gr_1: #4D4D4D;
+$c_gr_2: #666666;
+$c_gr_3: #808080;
+$c_gr_4: #ACACAC;
+$c_gr_5: #DFDFDF;
+$c_gr_6: #E3E3E3;
+
+
 
 /* =========================================
 		Colors Applied
@@ -55,6 +66,12 @@ $ca_success: $c_green;
 
 // elements
 $ca_bg_body: transparent;
+$ca_txt_body: $c_gr_2;
+$ca_txt_title: $c_gr_1;
+$ca_border_box: $c_gr_6;
+$ca_nav_a: $c_white;
+$ca_nav_a_hover: $c_gr_5;
+
 
 
 // typography

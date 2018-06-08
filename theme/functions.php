@@ -77,6 +77,7 @@ if ( ! function_exists( 'theme_setup' ) ) {
 		register_nav_menus( array(
 			'primary' => 'Main Menu',
 			'footer'  => 'Footer Menu',
+			'top_menu'  => 'Top Menu',
 		) );
 		
 
