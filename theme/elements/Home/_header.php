@@ -1,4 +1,4 @@
-<header class="header fixed">
+<header class="header">
 	<div class="container">
 		<div class="row justify-content-between align-items-center">
 				
@@ -12,7 +12,7 @@
 		
 		
 			<div class="nav">
-				<div class="nav--desktop hidden-md-down">
+				<div class="nav--desktop">
 					<?php MOZ_Menu::nav_menu('primary'); ?>
 				</div>
 				<div class="nav--mobile hidden-md-up">
@@ -31,14 +31,14 @@
 	
 	<article id="news-slug-1" class="featured img-cover" style="background-image:url(/wp-content/uploads/2018/06/11A0306_2400w.jpg)">
 		<div class="container">
-			<div class="row justify-content-start align-items-center" >
+			<div class="row justify-content-start align-items-end" >
 				<h1 class="featured__title"><span>İYTE’deki “Kuluçka”dan</span><br/><span>3,5 Milyon Dolarlık Şirket Çıktı</span></h1>
 			</div>
 		</div>
 	</article>
 	<article id="news-slug-1" class="featured img-cover" style="background-image:url(/wp-content/uploads/2018/06/11A0306_2400w.jpg)">
 		<div class="container">
-			<div class="row justify-content-start align-items-center" >
+			<div class="row justify-content-start align-items-end" >
 				<h1 class="featured__title"><span>İYTE’deki “Kuluçka”dan</span><br/><span>3,5 Milyon Dolarlık Şirket Çıktı</span></h1>
 			</div>
 		</div>
