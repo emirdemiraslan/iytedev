@@ -75,6 +75,7 @@
 @import "vendor/utility-classes";
 @import "vendor/bs-grid/grid";
 @import "vendor/iyte-icons/style";
+@import "vendor/slippry";
 
 
 
@@ -83,5 +84,4 @@
 */
 @import "elements/global";
 @import "elements/header";
-@import "elements/site";
-@import "elements/hero";
+@import "elements/home/home";

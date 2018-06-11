@@ -52,6 +52,7 @@
 	</div>
 </div>
 
+<?php if(!is_front_page()) : ?>
 <header class="header sticky">
 	<div class="container-fluid top">
 		<div class="row">
@@ -80,6 +81,7 @@
 		</div>
 	</div>
 </header>
+<?php endif; ?>
 
 
 <?php // Common header content goes here. ?>

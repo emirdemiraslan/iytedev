@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'iyte_web';
-  src:  url('#{$icomoon-font-path}/iyte_web.eot?9c025x');
-  src:  url('#{$icomoon-font-path}/iyte_web.eot?9c025x#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/iyte_web.ttf?9c025x') format('truetype'),
-    url('#{$icomoon-font-path}/iyte_web.woff?9c025x') format('woff'),
-    url('#{$icomoon-font-path}/iyte_web.svg?9c025x#iyte_web') format('svg');
+  src:  url('#{$icomoon-font-path}/iyte_web.eot?a0r8rm');
+  src:  url('#{$icomoon-font-path}/iyte_web.eot?a0r8rm#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/iyte_web.ttf?a0r8rm') format('truetype'),
+    url('#{$icomoon-font-path}/iyte_web.woff?a0r8rm') format('woff'),
+    url('#{$icomoon-font-path}/iyte_web.svg?a0r8rm#iyte_web') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,751 +26,765 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@function unicode($str) {
-  @return unquote("\"") + $str + unquote("\"");
+.icon-arrow-left {
+  &:before {
+    content: $icon-arrow-left;     
+    color: #fff;
+  }
 }
-
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right;     
+    color: #fff;
+  }
+}
+.icon-logo-white-full-v {
+  &:before {
+    content: $icon-logo-white-full-v;     
+    color: #fff;
+  }
+}
 .icon-logo-color .path1 {
   &:before {
-    content: unicode($icon-logo-color-path1);  
+    content: $icon-logo-color-path1;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path2 {
   &:before {
-    content: unicode($icon-logo-color-path2);  
+    content: $icon-logo-color-path2;  
     margin-left: -1em;  
     color: rgb(154, 18, 32);
   }
 }
 .icon-logo-color .path3 {
   &:before {
-    content: unicode($icon-logo-color-path3);  
+    content: $icon-logo-color-path3;  
     margin-left: -1em;  
     color: rgb(154, 18, 32);
   }
 }
 .icon-logo-color .path4 {
   &:before {
-    content: unicode($icon-logo-color-path4);  
+    content: $icon-logo-color-path4;  
     margin-left: -1em;  
     color: rgb(154, 18, 32);
   }
 }
 .icon-logo-color .path5 {
   &:before {
-    content: unicode($icon-logo-color-path5);  
+    content: $icon-logo-color-path5;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path6 {
   &:before {
-    content: unicode($icon-logo-color-path6);  
+    content: $icon-logo-color-path6;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path7 {
   &:before {
-    content: unicode($icon-logo-color-path7);  
+    content: $icon-logo-color-path7;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path8 {
   &:before {
-    content: unicode($icon-logo-color-path8);  
+    content: $icon-logo-color-path8;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path9 {
   &:before {
-    content: unicode($icon-logo-color-path9);  
+    content: $icon-logo-color-path9;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path10 {
   &:before {
-    content: unicode($icon-logo-color-path10);  
+    content: $icon-logo-color-path10;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path11 {
   &:before {
-    content: unicode($icon-logo-color-path11);  
+    content: $icon-logo-color-path11;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path12 {
   &:before {
-    content: unicode($icon-logo-color-path12);  
+    content: $icon-logo-color-path12;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path13 {
   &:before {
-    content: unicode($icon-logo-color-path13);  
+    content: $icon-logo-color-path13;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path14 {
   &:before {
-    content: unicode($icon-logo-color-path14);  
+    content: $icon-logo-color-path14;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path15 {
   &:before {
-    content: unicode($icon-logo-color-path15);  
+    content: $icon-logo-color-path15;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path16 {
   &:before {
-    content: unicode($icon-logo-color-path16);  
+    content: $icon-logo-color-path16;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path17 {
   &:before {
-    content: unicode($icon-logo-color-path17);  
+    content: $icon-logo-color-path17;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path18 {
   &:before {
-    content: unicode($icon-logo-color-path18);  
+    content: $icon-logo-color-path18;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path19 {
   &:before {
-    content: unicode($icon-logo-color-path19);  
+    content: $icon-logo-color-path19;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path20 {
   &:before {
-    content: unicode($icon-logo-color-path20);  
+    content: $icon-logo-color-path20;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path21 {
   &:before {
-    content: unicode($icon-logo-color-path21);  
+    content: $icon-logo-color-path21;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path22 {
   &:before {
-    content: unicode($icon-logo-color-path22);  
+    content: $icon-logo-color-path22;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path23 {
   &:before {
-    content: unicode($icon-logo-color-path23);  
+    content: $icon-logo-color-path23;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path24 {
   &:before {
-    content: unicode($icon-logo-color-path24);  
+    content: $icon-logo-color-path24;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path25 {
   &:before {
-    content: unicode($icon-logo-color-path25);  
+    content: $icon-logo-color-path25;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path26 {
   &:before {
-    content: unicode($icon-logo-color-path26);  
+    content: $icon-logo-color-path26;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path27 {
   &:before {
-    content: unicode($icon-logo-color-path27);  
+    content: $icon-logo-color-path27;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path28 {
   &:before {
-    content: unicode($icon-logo-color-path28);  
+    content: $icon-logo-color-path28;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path29 {
   &:before {
-    content: unicode($icon-logo-color-path29);  
+    content: $icon-logo-color-path29;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path30 {
   &:before {
-    content: unicode($icon-logo-color-path30);  
+    content: $icon-logo-color-path30;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path31 {
   &:before {
-    content: unicode($icon-logo-color-path31);  
+    content: $icon-logo-color-path31;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path32 {
   &:before {
-    content: unicode($icon-logo-color-path32);  
+    content: $icon-logo-color-path32;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path33 {
   &:before {
-    content: unicode($icon-logo-color-path33);  
+    content: $icon-logo-color-path33;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path34 {
   &:before {
-    content: unicode($icon-logo-color-path34);  
+    content: $icon-logo-color-path34;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path35 {
   &:before {
-    content: unicode($icon-logo-color-path35);  
+    content: $icon-logo-color-path35;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path36 {
   &:before {
-    content: unicode($icon-logo-color-path36);  
+    content: $icon-logo-color-path36;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path37 {
   &:before {
-    content: unicode($icon-logo-color-path37);  
+    content: $icon-logo-color-path37;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path38 {
   &:before {
-    content: unicode($icon-logo-color-path38);  
+    content: $icon-logo-color-path38;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path39 {
   &:before {
-    content: unicode($icon-logo-color-path39);  
+    content: $icon-logo-color-path39;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path40 {
   &:before {
-    content: unicode($icon-logo-color-path40);  
+    content: $icon-logo-color-path40;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path41 {
   &:before {
-    content: unicode($icon-logo-color-path41);  
+    content: $icon-logo-color-path41;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path42 {
   &:before {
-    content: unicode($icon-logo-color-path42);  
+    content: $icon-logo-color-path42;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path43 {
   &:before {
-    content: unicode($icon-logo-color-path43);  
+    content: $icon-logo-color-path43;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path44 {
   &:before {
-    content: unicode($icon-logo-color-path44);  
+    content: $icon-logo-color-path44;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path45 {
   &:before {
-    content: unicode($icon-logo-color-path45);  
+    content: $icon-logo-color-path45;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path46 {
   &:before {
-    content: unicode($icon-logo-color-path46);  
+    content: $icon-logo-color-path46;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path47 {
   &:before {
-    content: unicode($icon-logo-color-path47);  
+    content: $icon-logo-color-path47;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path48 {
   &:before {
-    content: unicode($icon-logo-color-path48);  
+    content: $icon-logo-color-path48;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path49 {
   &:before {
-    content: unicode($icon-logo-color-path49);  
+    content: $icon-logo-color-path49;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
   }
 }
 .icon-logo-color .path50 {
   &:before {
-    content: unicode($icon-logo-color-path50);  
+    content: $icon-logo-color-path50;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path51 {
   &:before {
-    content: unicode($icon-logo-color-path51);  
+    content: $icon-logo-color-path51;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path52 {
   &:before {
-    content: unicode($icon-logo-color-path52);  
+    content: $icon-logo-color-path52;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path53 {
   &:before {
-    content: unicode($icon-logo-color-path53);  
+    content: $icon-logo-color-path53;  
     margin-left: -1em;  
     color: rgb(64, 64, 65);
   }
 }
 .icon-logo-color .path54 {
   &:before {
-    content: unicode($icon-logo-color-path54);  
+    content: $icon-logo-color-path54;  
     margin-left: -1em;  
     color: rgb(154, 18, 32);
   }
 }
 .icon-logo-color .path55 {
   &:before {
-    content: unicode($icon-logo-color-path55);  
+    content: $icon-logo-color-path55;  
     margin-left: -1em;  
     color: rgb(154, 18, 32);
   }
 }
 .icon-akts {
   &:before {
-    content: unicode($icon-akts);     
+    content: $icon-akts;     
     color: #f5e936;
   }
 }
 .icon-atom1 {
   &:before {
-    content: unicode($icon-atom1); 
+    content: $icon-atom1; 
   }
 }
 .icon-atom2 {
   &:before {
-    content: unicode($icon-atom2); 
+    content: $icon-atom2; 
   }
 }
 .icon-basket {
   &:before {
-    content: unicode($icon-basket); 
+    content: $icon-basket; 
   }
 }
 .icon-bike {
   &:before {
-    content: unicode($icon-bike); 
+    content: $icon-bike; 
   }
 }
 .icon-book1 {
   &:before {
-    content: unicode($icon-book1); 
+    content: $icon-book1; 
   }
 }
 .icon-book2 {
   &:before {
-    content: unicode($icon-book2); 
+    content: $icon-book2; 
   }
 }
 .icon-book3 {
   &:before {
-    content: unicode($icon-book3); 
+    content: $icon-book3; 
   }
 }
 .icon-building {
   &:before {
-    content: unicode($icon-building); 
+    content: $icon-building; 
   }
 }
 .icon-bus {
   &:before {
-    content: unicode($icon-bus); 
+    content: $icon-bus; 
   }
 }
 .icon-chart1 {
   &:before {
-    content: unicode($icon-chart1); 
+    content: $icon-chart1; 
   }
 }
 .icon-chart2 {
   &:before {
-    content: unicode($icon-chart2); 
+    content: $icon-chart2; 
   }
 }
 .icon-checklist {
   &:before {
-    content: unicode($icon-checklist); 
+    content: $icon-checklist; 
   }
 }
 .icon-dna {
   &:before {
-    content: unicode($icon-dna); 
+    content: $icon-dna; 
   }
 }
 .icon-document-badge {
   &:before {
-    content: unicode($icon-document-badge); 
+    content: $icon-document-badge; 
   }
 }
 .icon-document-edit {
   &:before {
-    content: unicode($icon-document-edit); 
+    content: $icon-document-edit; 
   }
 }
 .icon-document {
   &:before {
-    content: unicode($icon-document); 
+    content: $icon-document; 
   }
 }
 .icon-facebook {
   &:before {
-    content: unicode($icon-facebook);     
+    content: $icon-facebook;     
     color: #fff;
   }
 }
 .icon-factory {
   &:before {
-    content: unicode($icon-factory); 
+    content: $icon-factory; 
   }
 }
 .icon-flickr {
   &:before {
-    content: unicode($icon-flickr);     
+    content: $icon-flickr;     
     color: #fff;
   }
 }
 .icon-graphen {
   &:before {
-    content: unicode($icon-graphen); 
+    content: $icon-graphen; 
   }
 }
 .icon-green {
   &:before {
-    content: unicode($icon-green); 
+    content: $icon-green; 
   }
 }
 .icon-instagram {
   &:before {
-    content: unicode($icon-instagram);     
+    content: $icon-instagram;     
     color: #fff;
   }
 }
 .icon-lamp {
   &:before {
-    content: unicode($icon-lamp); 
+    content: $icon-lamp; 
   }
 }
 .icon-linkedin {
   &:before {
-    content: unicode($icon-linkedin);     
+    content: $icon-linkedin;     
     color: #fff;
   }
 }
 .icon-logo-full-h {
   &:before {
-    content: unicode($icon-logo-full-h);     
+    content: $icon-logo-full-h;     
     color: #fff;
   }
 }
 .icon-logo-full-v {
   &:before {
-    content: unicode($icon-logo-full-v);     
+    content: $icon-logo-full-v;     
     color: #fff;
   }
 }
 .icon-logo-white {
   &:before {
-    content: unicode($icon-logo-white);     
+    content: $icon-logo-white;     
     color: #fff;
   }
 }
 .icon-logotype-h {
   &:before {
-    content: unicode($icon-logotype-h);     
+    content: $icon-logotype-h;     
     color: #fff;
   }
 }
 .icon-logotype-v {
   &:before {
-    content: unicode($icon-logotype-v);     
+    content: $icon-logotype-v;     
     color: #fff;
   }
 }
 .icon-microscope {
   &:before {
-    content: unicode($icon-microscope); 
+    content: $icon-microscope; 
   }
 }
 .icon-molecule {
   &:before {
-    content: unicode($icon-molecule); 
+    content: $icon-molecule; 
   }
 }
 .icon-presentation1 {
   &:before {
-    content: unicode($icon-presentation1); 
+    content: $icon-presentation1; 
   }
 }
 .icon-presentation2 {
   &:before {
-    content: unicode($icon-presentation2); 
+    content: $icon-presentation2; 
   }
 }
 .icon-presentation3 {
   &:before {
-    content: unicode($icon-presentation3); 
+    content: $icon-presentation3; 
   }
 }
 .icon-presentation4 {
   &:before {
-    content: unicode($icon-presentation4); 
+    content: $icon-presentation4; 
   }
 }
 .icon-presentation5 {
   &:before {
-    content: unicode($icon-presentation5); 
+    content: $icon-presentation5; 
   }
 }
 .icon-presentation6 {
   &:before {
-    content: unicode($icon-presentation6); 
+    content: $icon-presentation6; 
   }
 }
 .icon-presentation7 {
   &:before {
-    content: unicode($icon-presentation7); 
+    content: $icon-presentation7; 
   }
 }
 .icon-research1 {
   &:before {
-    content: unicode($icon-research1); 
+    content: $icon-research1; 
   }
 }
 .icon-research2 {
   &:before {
-    content: unicode($icon-research2); 
+    content: $icon-research2; 
   }
 }
 .icon-robotic-arm {
   &:before {
-    content: unicode($icon-robotic-arm); 
+    content: $icon-robotic-arm; 
   }
 }
 .icon-slogan-white {
   &:before {
-    content: unicode($icon-slogan-white);     
+    content: $icon-slogan-white;     
     color: #fff;
   }
 }
 .icon-student-f {
   &:before {
-    content: unicode($icon-student-f); 
+    content: $icon-student-f; 
   }
 }
 .icon-student-m {
   &:before {
-    content: unicode($icon-student-m); 
+    content: $icon-student-m; 
   }
 }
 .icon-study {
   &:before {
-    content: unicode($icon-study); 
+    content: $icon-study; 
   }
 }
 .icon-teacher {
   &:before {
-    content: unicode($icon-teacher); 
+    content: $icon-teacher; 
   }
 }
 .icon-teknopark-logo .path1 {
   &:before {
-    content: unicode($icon-teknopark-logo-path1);  
+    content: $icon-teknopark-logo-path1;  
     color: rgb(78, 143, 204);
   }
 }
 .icon-teknopark-logo .path2 {
   &:before {
-    content: unicode($icon-teknopark-logo-path2);  
+    content: $icon-teknopark-logo-path2;  
     margin-left: -1em;  
     color: rgb(78, 143, 204);
   }
 }
 .icon-teknopark-logo .path3 {
   &:before {
-    content: unicode($icon-teknopark-logo-path3);  
+    content: $icon-teknopark-logo-path3;  
     margin-left: -1em;  
     color: rgb(78, 143, 204);
   }
 }
 .icon-teknopark-logo .path4 {
   &:before {
-    content: unicode($icon-teknopark-logo-path4);  
+    content: $icon-teknopark-logo-path4;  
     margin-left: -1em;  
     color: rgb(78, 143, 204);
   }
 }
 .icon-teknopark-logo .path5 {
   &:before {
-    content: unicode($icon-teknopark-logo-path5);  
+    content: $icon-teknopark-logo-path5;  
     margin-left: -1em;  
     color: rgb(78, 143, 204);
   }
 }
 .icon-teknopark-logo .path6 {
   &:before {
-    content: unicode($icon-teknopark-logo-path6);  
+    content: $icon-teknopark-logo-path6;  
     margin-left: -1em;  
     color: rgb(246, 134, 40);
   }
 }
 .icon-teknopark-logo .path7 {
   &:before {
-    content: unicode($icon-teknopark-logo-path7);  
+    content: $icon-teknopark-logo-path7;  
     margin-left: -1em;  
     color: rgb(246, 134, 40);
   }
 }
 .icon-teknopark-logo .path8 {
   &:before {
-    content: unicode($icon-teknopark-logo-path8);  
+    content: $icon-teknopark-logo-path8;  
     margin-left: -1em;  
     color: rgb(246, 134, 40);
   }
 }
 .icon-teknopark-logo .path9 {
   &:before {
-    content: unicode($icon-teknopark-logo-path9);  
+    content: $icon-teknopark-logo-path9;  
     margin-left: -1em;  
     color: rgb(246, 134, 40);
   }
 }
 .icon-teknopark-logo .path10 {
   &:before {
-    content: unicode($icon-teknopark-logo-path10);  
+    content: $icon-teknopark-logo-path10;  
     margin-left: -1em;  
     color: rgb(246, 134, 40);
   }
 }
 .icon-teknopark-logo .path11 {
   &:before {
-    content: unicode($icon-teknopark-logo-path11);  
+    content: $icon-teknopark-logo-path11;  
     margin-left: -1em;  
     color: rgb(246, 134, 40);
   }
 }
 .icon-teknopark-logo .path12 {
   &:before {
-    content: unicode($icon-teknopark-logo-path12);  
+    content: $icon-teknopark-logo-path12;  
     margin-left: -1em;  
     color: rgb(119, 188, 31);
   }
 }
 .icon-teknopark-logo .path13 {
   &:before {
-    content: unicode($icon-teknopark-logo-path13);  
+    content: $icon-teknopark-logo-path13;  
     margin-left: -1em;  
     color: rgb(119, 188, 31);
   }
 }
 .icon-teknopark-logo .path14 {
   &:before {
-    content: unicode($icon-teknopark-logo-path14);  
+    content: $icon-teknopark-logo-path14;  
     margin-left: -1em;  
     color: rgb(119, 188, 31);
   }
 }
 .icon-tubitak {
   &:before {
-    content: unicode($icon-tubitak); 
+    content: $icon-tubitak; 
   }
 }
 .icon-twitter {
   &:before {
-    content: unicode($icon-twitter);     
+    content: $icon-twitter;     
     color: #fff;
   }
 }
 .icon-youtube {
   &:before {
-    content: unicode($icon-youtube);     
+    content: $icon-youtube;     
     color: #fff;
   }
 }

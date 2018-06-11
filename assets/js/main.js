@@ -41,7 +41,7 @@ import 'glob:../svg/**/*.svg';
  */
 
 // silly example:
-import obj from './scripts/example';
+import './scripts/home';
 
 /* eslint no-console: 0 */
-console.log(obj);
+

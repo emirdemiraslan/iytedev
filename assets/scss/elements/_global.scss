@@ -7,7 +7,7 @@ a{
 .menu__list{    
     @include flexbox();
     @include flex-flow(row wrap);
-    @include justify-content(flex-start);
+    @include justify-content(space-between);
     @include align-items(center);
     
     li{
@@ -50,4 +50,11 @@ a{
             }
         }
     }
+}
+
+.img-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-clip: content-box;
 }
