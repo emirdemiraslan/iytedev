@@ -20,18 +20,22 @@ a{
         position: relative;
         a{
             font-family: $t_nav;
-            font-size: 21px;
+            font-size: 20px;
             color: $ca_nav_a;
             display: block;
             width: 100%;
             height: 100%;
             font-weight: 300;
+            transition: $quick_tr;
+            letter-spacing: 1px;
             
             &:hover{
                 color:$ca_nav_a_hover;
                 
             }
         }
+        
+        
         &.menu__item--current{
             a{
                 color:$ca_nav_a_hover;
@@ -78,12 +82,12 @@ a{
         width: 100%;
         transform: translateY(-2em);
         z-index: -1;
-        transition: all 0.3s ease-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+        transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.2s, z-index 0s linear 0.01s;
         width: auto;
         li{
             a{
                 padding: 10px 20px;
-                font-size: 12px;
+                font-size: 15px;
                 color: $ca_nav_a_hover;
                 background-color: $c_brand;
                 transition: $quick_tr;
@@ -93,11 +97,52 @@ a{
             }
         }
     }
+
+    &--level-0 >li:hover>a {
+        background: $c_brand;
+                
+    }
 }
 
+.section-title{
+    letter-spacing: -0.5px;
+    @at-root{
+        h1#{&} {
+           margin: 32px 0; 
+        }
+    }
+}
 .img-cover{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
     background-clip: content-box;
+}
+.card-stack{
+    padding: 0 15px;
+}
+.card{
+    width: 240px;
+    height: 160px;
+    position: relative;
+    .overlay{
+        display: block;  
+        width: 100%;
+        height: 100%;
+        @include linearGradient('bottom', rgba(0,0,0,.7), rgba(0,0,0,0), rgba(0,0,0,0));
+    }
+    &__title{
+            font-size: 14px;
+            font-weight: 100;
+            color: #fff;
+            position: absolute;
+            width: 90%;
+            text-align: left;
+            left: 5%;
+            bottom: 5%;
+            margin: 0;
+            text-shadow: 0px 0px 3px rgba(0,0,0,.5);
+            letter-spacing: 1px;
+
+    }
 }

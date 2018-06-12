@@ -56,6 +56,10 @@ if ( ! function_exists( 'theme_setup' ) ) {
 		/* Let wp know we want to use post thumbnails. */
 
 		add_theme_support( 'post-thumbnails' ); 
+		add_image_size('small-news-thumb',70,70,true);
+		add_image_size('col-4-thumb',350,232);
+		add_image_size('col-3-thumb',254,167);
+
 
 		// Add WP 4.1 title tag support.
 		add_theme_support( 'title-tag' );
