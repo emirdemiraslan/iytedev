@@ -17,8 +17,8 @@ import '../vendor/slippry';
     
             // transitions
             transition: 'horizontal', // fade, horizontal, kenburns, false
-            speed: 1200,
             pause: 8000,
+            easing:'easeInOutSine',
     
             // slideshow
             autoDirection: 'prev'

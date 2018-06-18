@@ -29,8 +29,8 @@
     $_angle-with-vendor-prefix: $angle % 360;
     $_angle: (90 - $angle) % 360;
   }
-  background: -webkit-linear-gradient($_angle-with-vendor-prefix, $color-stops);
-  background: -moz-linear-gradient($_angle-with-vendor-prefix, $color-stops);
-  background: -o-linear-gradient($_angle-with-vendor-prefix, $color-stops);
-  background: linear-gradient($_angle, $color-stops);
+  background-image: -webkit-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+  background-image: -moz-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+  background-image: -o-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+  background-image: linear-gradient($_angle, $color-stops);
 }

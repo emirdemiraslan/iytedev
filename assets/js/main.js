@@ -42,6 +42,7 @@ import 'glob:../svg/**/*.svg';
 
 // silly example:
 import './scripts/home';
+import './utils/stretch.text';
 
 /* eslint no-console: 0 */
 
