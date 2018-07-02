@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'iyte_web';
-  src:  url('#{$icomoon-font-path}/iyte_web.eot?a0r8rm');
-  src:  url('#{$icomoon-font-path}/iyte_web.eot?a0r8rm#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/iyte_web.ttf?a0r8rm') format('truetype'),
-    url('#{$icomoon-font-path}/iyte_web.woff?a0r8rm') format('woff'),
-    url('#{$icomoon-font-path}/iyte_web.svg?a0r8rm#iyte_web') format('svg');
+  src:  url('#{$icomoon-font-path}/iyte_web.eot?2zliw9');
+  src:  url('#{$icomoon-font-path}/iyte_web.eot?2zliw9#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/iyte_web.ttf?2zliw9') format('truetype'),
+    url('#{$icomoon-font-path}/iyte_web.woff?2zliw9') format('woff'),
+    url('#{$icomoon-font-path}/iyte_web.svg?2zliw9#iyte_web') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,64 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-globe-network {
+  &:before {
+    content: $icon-globe-network; 
+  }
+}
+.icon-globe2 {
+  &:before {
+    content: $icon-globe2; 
+  }
+}
+.icon-globe1 {
+  &:before {
+    content: $icon-globe1; 
+  }
+}
+.icon-erasmus-logo {
+  &:before {
+    content: $icon-erasmus-logo;     
+    color: #1f76bc;
+  }
+}
+.icon-teknopark-logo {
+  &:before {
+    content: $icon-teknopark-logo;     
+    color: #fff;
+  }
+}
+.icon-logo-color {
+  &:before {
+    content: $icon-logo-color;     
+    color: #9a1220;
+  }
+}
+.icon-pause {
+  &:before {
+    content: $icon-pause; 
+  }
+}
+.icon-play {
+  &:before {
+    content: $icon-play; 
+  }
+}
+.icon-mail {
+  &:before {
+    content: $icon-mail; 
+  }
+}
+.icon-location {
+  &:before {
+    content: $icon-location; 
+  }
+}
+.icon-phone {
+  &:before {
+    content: $icon-phone; 
+  }
+}
 .icon-arrow-left {
   &:before {
     content: $icon-arrow-left;     
@@ -42,390 +100,6 @@
   &:before {
     content: $icon-logo-white-full-v;     
     color: #fff;
-  }
-}
-.icon-logo-color .path1 {
-  &:before {
-    content: $icon-logo-color-path1;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path2 {
-  &:before {
-    content: $icon-logo-color-path2;  
-    margin-left: -1em;  
-    color: rgb(154, 18, 32);
-  }
-}
-.icon-logo-color .path3 {
-  &:before {
-    content: $icon-logo-color-path3;  
-    margin-left: -1em;  
-    color: rgb(154, 18, 32);
-  }
-}
-.icon-logo-color .path4 {
-  &:before {
-    content: $icon-logo-color-path4;  
-    margin-left: -1em;  
-    color: rgb(154, 18, 32);
-  }
-}
-.icon-logo-color .path5 {
-  &:before {
-    content: $icon-logo-color-path5;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path6 {
-  &:before {
-    content: $icon-logo-color-path6;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path7 {
-  &:before {
-    content: $icon-logo-color-path7;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path8 {
-  &:before {
-    content: $icon-logo-color-path8;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path9 {
-  &:before {
-    content: $icon-logo-color-path9;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path10 {
-  &:before {
-    content: $icon-logo-color-path10;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path11 {
-  &:before {
-    content: $icon-logo-color-path11;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path12 {
-  &:before {
-    content: $icon-logo-color-path12;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path13 {
-  &:before {
-    content: $icon-logo-color-path13;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path14 {
-  &:before {
-    content: $icon-logo-color-path14;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path15 {
-  &:before {
-    content: $icon-logo-color-path15;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path16 {
-  &:before {
-    content: $icon-logo-color-path16;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path17 {
-  &:before {
-    content: $icon-logo-color-path17;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path18 {
-  &:before {
-    content: $icon-logo-color-path18;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path19 {
-  &:before {
-    content: $icon-logo-color-path19;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path20 {
-  &:before {
-    content: $icon-logo-color-path20;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path21 {
-  &:before {
-    content: $icon-logo-color-path21;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path22 {
-  &:before {
-    content: $icon-logo-color-path22;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path23 {
-  &:before {
-    content: $icon-logo-color-path23;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path24 {
-  &:before {
-    content: $icon-logo-color-path24;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path25 {
-  &:before {
-    content: $icon-logo-color-path25;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path26 {
-  &:before {
-    content: $icon-logo-color-path26;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path27 {
-  &:before {
-    content: $icon-logo-color-path27;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path28 {
-  &:before {
-    content: $icon-logo-color-path28;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path29 {
-  &:before {
-    content: $icon-logo-color-path29;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path30 {
-  &:before {
-    content: $icon-logo-color-path30;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path31 {
-  &:before {
-    content: $icon-logo-color-path31;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path32 {
-  &:before {
-    content: $icon-logo-color-path32;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path33 {
-  &:before {
-    content: $icon-logo-color-path33;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path34 {
-  &:before {
-    content: $icon-logo-color-path34;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path35 {
-  &:before {
-    content: $icon-logo-color-path35;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path36 {
-  &:before {
-    content: $icon-logo-color-path36;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path37 {
-  &:before {
-    content: $icon-logo-color-path37;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path38 {
-  &:before {
-    content: $icon-logo-color-path38;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path39 {
-  &:before {
-    content: $icon-logo-color-path39;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path40 {
-  &:before {
-    content: $icon-logo-color-path40;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path41 {
-  &:before {
-    content: $icon-logo-color-path41;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path42 {
-  &:before {
-    content: $icon-logo-color-path42;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path43 {
-  &:before {
-    content: $icon-logo-color-path43;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path44 {
-  &:before {
-    content: $icon-logo-color-path44;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path45 {
-  &:before {
-    content: $icon-logo-color-path45;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path46 {
-  &:before {
-    content: $icon-logo-color-path46;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path47 {
-  &:before {
-    content: $icon-logo-color-path47;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path48 {
-  &:before {
-    content: $icon-logo-color-path48;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path49 {
-  &:before {
-    content: $icon-logo-color-path49;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-logo-color .path50 {
-  &:before {
-    content: $icon-logo-color-path50;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path51 {
-  &:before {
-    content: $icon-logo-color-path51;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path52 {
-  &:before {
-    content: $icon-logo-color-path52;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path53 {
-  &:before {
-    content: $icon-logo-color-path53;  
-    margin-left: -1em;  
-    color: rgb(64, 64, 65);
-  }
-}
-.icon-logo-color .path54 {
-  &:before {
-    content: $icon-logo-color-path54;  
-    margin-left: -1em;  
-    color: rgb(154, 18, 32);
-  }
-}
-.icon-logo-color .path55 {
-  &:before {
-    content: $icon-logo-color-path55;  
-    margin-left: -1em;  
-    color: rgb(154, 18, 32);
   }
 }
 .icon-akts {
@@ -672,103 +346,6 @@
 .icon-teacher {
   &:before {
     content: $icon-teacher; 
-  }
-}
-.icon-teknopark-logo .path1 {
-  &:before {
-    content: $icon-teknopark-logo-path1;  
-    color: rgb(78, 143, 204);
-  }
-}
-.icon-teknopark-logo .path2 {
-  &:before {
-    content: $icon-teknopark-logo-path2;  
-    margin-left: -1em;  
-    color: rgb(78, 143, 204);
-  }
-}
-.icon-teknopark-logo .path3 {
-  &:before {
-    content: $icon-teknopark-logo-path3;  
-    margin-left: -1em;  
-    color: rgb(78, 143, 204);
-  }
-}
-.icon-teknopark-logo .path4 {
-  &:before {
-    content: $icon-teknopark-logo-path4;  
-    margin-left: -1em;  
-    color: rgb(78, 143, 204);
-  }
-}
-.icon-teknopark-logo .path5 {
-  &:before {
-    content: $icon-teknopark-logo-path5;  
-    margin-left: -1em;  
-    color: rgb(78, 143, 204);
-  }
-}
-.icon-teknopark-logo .path6 {
-  &:before {
-    content: $icon-teknopark-logo-path6;  
-    margin-left: -1em;  
-    color: rgb(246, 134, 40);
-  }
-}
-.icon-teknopark-logo .path7 {
-  &:before {
-    content: $icon-teknopark-logo-path7;  
-    margin-left: -1em;  
-    color: rgb(246, 134, 40);
-  }
-}
-.icon-teknopark-logo .path8 {
-  &:before {
-    content: $icon-teknopark-logo-path8;  
-    margin-left: -1em;  
-    color: rgb(246, 134, 40);
-  }
-}
-.icon-teknopark-logo .path9 {
-  &:before {
-    content: $icon-teknopark-logo-path9;  
-    margin-left: -1em;  
-    color: rgb(246, 134, 40);
-  }
-}
-.icon-teknopark-logo .path10 {
-  &:before {
-    content: $icon-teknopark-logo-path10;  
-    margin-left: -1em;  
-    color: rgb(246, 134, 40);
-  }
-}
-.icon-teknopark-logo .path11 {
-  &:before {
-    content: $icon-teknopark-logo-path11;  
-    margin-left: -1em;  
-    color: rgb(246, 134, 40);
-  }
-}
-.icon-teknopark-logo .path12 {
-  &:before {
-    content: $icon-teknopark-logo-path12;  
-    margin-left: -1em;  
-    color: rgb(119, 188, 31);
-  }
-}
-.icon-teknopark-logo .path13 {
-  &:before {
-    content: $icon-teknopark-logo-path13;  
-    margin-left: -1em;  
-    color: rgb(119, 188, 31);
-  }
-}
-.icon-teknopark-logo .path14 {
-  &:before {
-    content: $icon-teknopark-logo-path14;  
-    margin-left: -1em;  
-    color: rgb(119, 188, 31);
   }
 }
 .icon-tubitak {

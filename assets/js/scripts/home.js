@@ -9,7 +9,7 @@ import '../vendor/slippry';
             elements: 'article', // elments cointaining slide content
     
             // options
-            adaptiveHeight: false, // height of the sliders adapts to current 
+            adaptiveHeight: true, // height of the sliders adapts to current 
             captions: false,
     
             // pager
@@ -21,7 +21,7 @@ import '../vendor/slippry';
             easing:'easeInOutSine',
     
             // slideshow
-            autoDirection: 'prev'
+            autoDirection: 'next'
         });
     });
 })(jQuery);

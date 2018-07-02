@@ -7,6 +7,20 @@ html, body, p {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     line-height: 133%;
 }
+body{
+    background: #f1d7da;
+}
+.hero_header .header{
+    max-width: $d_bx_size;
+}
+main>section{
+    padding: 50px 0;
+}
+.box_wrapper{
+    max-width: $d_bx_size;
+    margin: 0 auto;
+    background: #fff;
+}
 a{
     text-decoration: none;
     transition: $quick_tr;
@@ -21,7 +35,7 @@ a{
 .menu__list{    
 
     @include flexbox();
-    @include flex-flow(row wrap);
+    @include flex-flow(row nowrap);
     @include justify-content(space-between);
     @include align-items(center);
 
@@ -39,7 +53,7 @@ a{
             display: block;
             width: 100%;
             height: 100%;
-            font-weight: 300;
+            font-weight: 700;
             transition: $quick_tr;
             letter-spacing: 1px;
             
@@ -72,8 +86,8 @@ a{
                                                             
                     &:after{
                         position: absolute;
-                        top: 20px;
-                        right: 7px;
+                        top: 12px;
+                        right: 6px;
                         content: $icon-arrow-right;
                         font-family: iyte_web;
                         font-size: 8px;
@@ -142,23 +156,31 @@ a{
 }
 .card{
     width: 24%;
-    height: 160px;
+    height: 200px;
     position: relative;
     margin-top:2%;
     background-blend-mode:hard-light;
     transition: $quick_tr;
+    @include media-breakpoint-down(xl){
+        height: 170px;
+        
+    }
+    @include media-breakpoint-down(lg){
+        height: 150px;
+        
+    }
     @include media-breakpoint-down(md){
-        height: 220px;
+        height: 200px;
         width: 48%;
         
     }
     @include media-breakpoint-down(sm){
-        height: 220px;
+        height: 260px;
         width: 100%;
         
     }
     &:hover{
-        background-color: $c_brand_dark;
+        background-color: $c_gr_4;
         .card__title{
             color: $ca_nav_a_hover;
         }
@@ -189,6 +211,79 @@ a{
                 font-size: 2vw;
                 bottom: 8%;
             }
+            @include media-breakpoint-down(md){
+                font-size: 3vw;
+                bottom: 8%;
+                text-align: center;
+                font-weight: 400;
+            }
 
+    }
+}
+
+.btn{
+    display: inline-block;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+    margin: 0 10px 15px 10px;
+    
+    &.bordered{
+        border-width: 1px;
+        border-style: solid;
+        border-color: #fff;
+    }
+    &__tooltip{
+        opacity: 0;
+        visibility: hidden;
+        @include centerer("x");
+        text-align: center;
+        top:-40px;
+        transition: $quick_tr;
+        border-radius: 4px;
+        padding: 4px 10px;
+        background-color: #000; 
+        white-space: nowrap;
+
+        &:before{
+            content:'';
+            display:block;
+            width:0;
+            height:0;
+            border-top: 8px solid #000;
+            border-left: 8px solid transparent;
+            border-right:8px solid transparent;
+            bottom:-8px;
+
+            @include centerer("x");
+            
+        }
+
+    }
+    &:hover{
+        background-color: #000;
+        color: #fff;
+        &.bordered{
+            border-color: #000;
+        }
+        
+        .btn__tooltip{
+            top: -44px;
+            opacity: 1;
+            visibility: initial;
+        }
+
+       
+
+    }
+    &__icon{
+        @include centerer("xy");
+        font-size: 32px;
+        &::before{
+
+                color: #fff;
+            }
+        
     }
 }

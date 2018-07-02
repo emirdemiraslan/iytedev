@@ -19,7 +19,11 @@
 	<?php wp_head(); ?>
 	
 </head>
-<body class="site__body">
+<body <?php body_class(); ?>>
+	<!--closes in footer-->
+	<div class="box_wrapper">
+
+	
 <div id="top">
 	<div class="container">
 		<div class="row">
@@ -52,20 +56,16 @@
 	</div>
 </div>
 
-<?php if(!is_front_page()) : ?>
+<?php if(!is_front_page() && !is_singular( 'manset' )): ?>
 <header class="header sticky">
 	<div class="container-fluid top">
 		<div class="row">
 			<div class="col-10 col-md-6">	
 				<div class="brand">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<span class="brand__logo">
-						<?php MOZ_SVG::svg('brand_logo'); ?>
-					</span>
-					<span class="brand__text">
-						<strong>Chornenky</strong>Creative
-					</span>
-					</a>
+				<span class="brand__logo icon-logo-color"></span>
+				<span class="brand__logo icon-logo-type-v"></span>
+				</a>
 				</div>
 			</div>
 			<div class="col-2 col-md-6 nav">

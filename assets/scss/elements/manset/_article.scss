@@ -1,0 +1,52 @@
+.post_article{
+    padding: 50px 0;
+
+    .post_title{
+        color: $c_post_title;
+        font-weight: 900;
+        margin: 0 0 15px 0;
+
+    }
+    .postmeta{
+        display: flex;
+        flex-flow: row nowrap;
+        &>div{
+            margin-right: 20px;
+            color: $c_post_meta;
+            font-size: 14px;
+            font-weight: 300;
+        }
+        &__tags{
+            a{
+                margin-right: 5px;
+                color: inherit;
+                &:hover{
+                    color: $c_gr_1;
+                }
+                &:before{
+                    content: "#";
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    main.content{
+        p, div{
+            font-family: 'Roboto Slab', serif;
+            color: $c_post_body;
+            font-weight: 300;
+            strong{
+                color: $c_post_body-bold;
+                font-weight: 400;
+            }
+        }
+        .alignleft{
+            float: left;
+        }
+        h1, h2, h3, h4, h5, h6{
+            color: $c_post_title;
+        }
+    }
+
+}
