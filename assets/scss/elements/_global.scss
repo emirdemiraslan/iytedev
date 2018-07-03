@@ -15,11 +15,13 @@ body{
 }
 main>section{
     padding: 50px 0;
+    clear: both;
 }
 .box_wrapper{
     max-width: $d_bx_size;
     margin: 0 auto;
     background: #fff;
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
@@ -42,10 +44,11 @@ a{
     margin: 0;
     
     li{
-        @include rem(margin-left,5rem);
+       // @include rem(margin-left,5rem);
         height: 100%;
         vertical-align: middle;
         position: relative;
+        margin: 0;
         a{
             font-family: $t_nav;
             font-size: 20px;
@@ -56,6 +59,7 @@ a{
             font-weight: 700;
             transition: $quick_tr;
             letter-spacing: 1px;
+            padding: 10px 20px 10px 10px;
             
             &:hover{
                 color:$ca_nav_a_hover;
@@ -76,7 +80,7 @@ a{
             opacity: 1;
             z-index: 1;
             transform: translateY(0%);
-            transition-delay: 0s, 0s, 0.3s;
+            //
         }
     }
     & > .menu__item--has-children:hover > a{
@@ -101,6 +105,7 @@ a{
     }
     &--submenu{
         border-top: 1px solid $c_brand_dark;
+        display: block;
         margin: 0;
         visibility: hidden; /* hides sub-menu */
         opacity: 0;
@@ -110,11 +115,16 @@ a{
         width: 100%;
         transform: translateY(-2em);
         z-index: -1;
-        transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.2s, z-index 0s linear 0.01s;
+        transition: all 0.2s ease-out 0s, visibility 0s linear 0.01s, z-index 0s linear 0.01s;
+        //transition-delay: 0s, 0s, 0.3s;
         width: auto;
+        
         li{
             a{
-                padding: 10px 20px;
+                padding: 7px 15px;
+                margin: 0;
+                display: inline-block;
+                white-space: nowrap;
                 font-size: 15px;
                 color: $ca_nav_a_hover;
                 background-color: $c_brand;

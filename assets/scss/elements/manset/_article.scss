@@ -1,5 +1,8 @@
 .post_article{
     padding: 50px 0;
+    main>section{
+        padding: 25px 0;
+    }
 
     .post_title{
         color: $c_post_title;
@@ -36,17 +39,89 @@
             font-family: 'Roboto Slab', serif;
             color: $c_post_body;
             font-weight: 300;
+            text-align: justify;
             strong{
                 color: $c_post_body-bold;
                 font-weight: 400;
             }
         }
+        a{
+            font-weight: 700;
+            color: $c_post_title;
+            text-decoration: underline;
+            &:hover{
+                text-decoration: none;
+                color: $c_post_meta;
+            }
+        }
         .alignleft{
             float: left;
+            margin: 0px 30px 10px 0;
         }
         h1, h2, h3, h4, h5, h6{
             color: $c_post_title;
+            font-family: 'Roboto', sans-serif;
+            text-transform: capitalize;
+            margin: 0 0 15px 0;
+        }
+        .full_bg{
+            padding: 35px 0;
+            background: #f3f3f3;
+    
+            blockquote{
+                color: $c_post_meta;
+                font-size: 32px;
+                font-style: italic;
+                font-weight: 300;
+                text-align: center;
+                line-height: 133%;
+                margin: 0 50px;
+                @include media-breakpoint-down(md){
+                    margin: 0 20px;
+                }
+            }
+        }
+        .video{
+            &__float--right{
+                float: right;
+                margin: 0 0 10px 30px;
+            }
+            &__float--left{
+                float: left;
+                margin: 0 30px 10px 0;
+            }
+
+            &__size--full{
+                width: 100%;
+                height: 560px;
+                @include media-breakpoint-down(md){
+                    height: 280px;
+                }
+            }
+            &__size--half{
+                width: 50%;
+                height: 320px;
+            }
+        }
+        .photo_gallery{
+            h2{
+                color: $c_post_meta;
+            }
+            .photoalbum{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                align-items: center;
+                &__link{
+                    width: 160px;
+                    margin-right: 20px;
+                    &:hover{
+                        opacity: .8;
+                    }
+                }
+            }
         }
     }
+
 
 }

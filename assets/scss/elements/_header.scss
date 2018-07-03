@@ -64,6 +64,40 @@
 
 }
 
+header.clean_header{
+    padding: 20px 0;
+    .brand{
+        width: 30%;
+        
+    }
+    .nav{
+        width:70%;
+        padding-left: 10%;
+
+        .menu{
+            margin-top: -17px;
+
+            &__list{
+                padding: 0;
+                li{ 
+                    a{
+                        color: $c_gr_1;
+                    }
+                    &:hover a{
+                            color: #fff;
+                        }
+                }
+                
+                
+                
+            }
+            
+            
+            
+        }
+
+    }
+}
 
 
         

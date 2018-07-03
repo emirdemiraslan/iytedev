@@ -30,18 +30,22 @@
 <section id="featured_news">
 	
 	<article id="news-slug-1" class="featured img-cover" style="background-image:url(/wp-content/uploads/2018/06/11A0306_2400w.jpg)">
-		<div class="container">
-			<div class="row justify-content-start align-items-end" >
-				<h1 class="featured__title"><span>İYTE’deki “Kuluçka”dan</span><br/><span>3,5 Milyon Dolarlık Şirket Çıktı</span></h1>
+		<a href="/manset/iytedeki-kuluckadan-35-milyon-dolarlik-sirket-cikti/">
+			<div class="container">
+				<div class="row justify-content-start align-items-end" >
+					<h1 class="featured__title"><span>İYTE’deki “Kuluçka”dan</span><br/><span>3,5 Milyon Dolarlık Şirket Çıktı</span></h1>
+				</div>
 			</div>
-		</div>
+		</a>
 	</article>
 	<article id="news-slug-1" class="featured img-cover" style="background-image:url(/wp-content/uploads/2018/06/11A0306_2400w.jpg)">
-		<div class="container">
-			<div class="row justify-content-start align-items-end" >
-				<h1 class="featured__title"><span>İYTE’deki “Kuluçka”dan</span><br/><span>3,5 Milyon Dolarlık Şirket Çıktı</span></h1>
+		<a href="/manset/iytedeki-kuluckadan-35-milyon-dolarlik-sirket-cikti/">
+			<div class="container">
+				<div class="row justify-content-start align-items-end" >
+					<h1 class="featured__title"><span>İYTE’deki “Kuluçka”dan</span><br/><span>3,5 Milyon Dolarlık Şirket Çıktı</span></h1>
+				</div>
 			</div>
-		</div>
+		</a>
 	</article>
 
 

@@ -48,7 +48,6 @@
 </div>
 <div id="mobilemenu" class="mobilemenu hidden-md-up">
 	<div class="mobilemenu__head">
-		<h2>MENU</h2>
 		<a class="close_btn" href="javascript:void(0);"><div class="icon-close-button-white"></div></a>
 	</div>
 	<div class="mobilemenu__body nav">
@@ -57,26 +56,23 @@
 </div>
 
 <?php if(!is_front_page() && !is_singular( 'manset' )): ?>
-<header class="header sticky">
-	<div class="container-fluid top">
-		<div class="row">
-			<div class="col-10 col-md-6">	
-				<div class="brand">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<span class="brand__logo icon-logo-color"></span>
-				<span class="brand__logo icon-logo-type-v"></span>
-				</a>
-				</div>
+<header class="header clean_header">
+	<div class="container top">
+		<div class="row justify-content-between align-items-center">
+			<div class="brand">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<?php MOZ_SVG::svg( 'logo-colored-full-v' ); ?>
+			</a>
 			</div>
-			<div class="col-2 col-md-6 nav">
-				<div class="nav--desktop hidden-md-down">
-					<?php MOZ_Menu::nav_menu('primary'); ?>
-				</div>
-				<div class="nav--mobile hidden-lg-up">
-					<a class="mobile_open" href="javascript:void(0)">
-						<div class="icon-menu-button"></div>
-					</a>
-				</div>
+		
+		
+			<div class="nav nav--desktop hidden-md-down">
+				<?php MOZ_Menu::nav_menu('primary'); ?>
+			</div>
+			<div class="nav--mobile hidden-lg-up">
+				<a class="mobile_open" href="javascript:void(0)">
+					<div class="icon-menu-button"></div>
+				</a>
 			</div>
 		</div>
 	</div>

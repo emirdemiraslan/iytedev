@@ -29,31 +29,14 @@
                     &__list{
                         padding: 0;
                         li a{
+                            color: #fff;
                             text-shadow: 0 0 2px rgba(0,0,0,.8);
                         }
                        
-                        &--submenu{
-                            display: block;
-                            
-                            li{
-                                a{
-                                    padding: 7px 15px;
-                                    margin: 0;
-                                    display: inline-block;
-                                    white-space: nowrap;
-
-                                }
-                            }
-                        }
+                        
                     }
                     
-                    &__item{
-                        margin: 0;
-                        a{
-                            color: #fff;
-                            padding: 10px 20px 10px 10px;
-                        }
-                    }
+                    
                     
                 }
 
