@@ -115,8 +115,41 @@
                 &__link{
                     width: 160px;
                     margin-right: 20px;
+                    margin-bottom: 20px;
                     &:hover{
                         opacity: .8;
+                    }
+                    &::last-of-type{
+                        margin-right: 0;
+                    }
+                }
+                
+            }
+        }
+        .related_news{
+            h2{
+                text-transform: uppercase;
+                color: $c_brand;
+            }
+            .card-stack{
+                padding: 0;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                align-items: center;
+                .card{
+                    margin-right: 30px;
+                    &__title{
+                        color: #fff;
+                        background-color: $c_brand;
+                        padding: 5px 10px;
+                        margin: 0;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                    }
+                    &:last-of-type{
+                        margin-right: 0;
                     }
                 }
             }

@@ -1,4 +1,4 @@
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 <article class="post_article">
     <header>
         <div class="container">
@@ -85,8 +85,27 @@
                 </div>
             </div>
         </section>
+
+        <section class="related_news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Diğer Haberler</h2>
+                        <div class="card-stack">
+                            <div class="card img-cover" style="background-image:url(/wp-content/uploads/2018/05/30964342896_b724eb0955_k-348x232.jpg)">
+                                <a href="#" class="card__link overlay">
+                                    <h3 class="card__title">DİĞER HABER</h3>
+                                </a>
+                            </div>
+                            <div class="card img-cover" style="background-image:url(/wp-content/uploads/2018/05/roboleague-348x232.jpg)">
+                                <a href="#" class="card__link overlay">
+                                    <h3 class="card__title">DİĞER HABER</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </article>
-<?php endwhile; else : ?>
-	<p><?php esc_html_e( 'Sayfaya ulaşılamadı' ); ?></p>
-<?php endif; ?>

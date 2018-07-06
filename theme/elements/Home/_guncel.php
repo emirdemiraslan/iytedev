@@ -40,6 +40,7 @@
             </div>
         </div>
         <div class="col-lg-4 col-md-12">
+            
             <div class="newsbox haberler">
                 <div class="newsbox__header justify-content-between align-items-center">
                     <h1 class="newsbox__header--title">
@@ -89,6 +90,7 @@
                     </ul>
                 </div>
             </div>
+            
         </div>
         <div class="col-lg-4 col-md-12">
             <div class="newsbox duyurular">

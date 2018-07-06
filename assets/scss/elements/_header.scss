@@ -28,6 +28,7 @@
                     border-right: 1px solid #fff;
                     margin-right: 12px;
                     font-weight: 400;
+                    padding: 0;
 
                     &:hover{
                         color:#333;
@@ -66,8 +67,12 @@
 
 header.clean_header{
     padding: 20px 0;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
     .brand{
         width: 30%;
+        img.logo{
+            height: 115px;
+        }
         
     }
     .nav{

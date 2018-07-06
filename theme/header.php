@@ -61,7 +61,7 @@
 		<div class="row justify-content-between align-items-center">
 			<div class="brand">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-			<?php MOZ_SVG::svg( 'logo-colored-full-v' ); ?>
+				<img class="logo" src="<?php echo get_template_directory_uri()."/assets/svg/logo-colored-full-v.svg"; ?>" alt="İzmir Yüksek Teknoloji Enstitiüsü">
 			</a>
 			</div>
 		
