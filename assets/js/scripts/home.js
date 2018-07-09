@@ -25,3 +25,9 @@ import '../vendor/slippry';
         });
     });
 })(jQuery);
+
+(function($){
+$('.nav--desktop>.menu--primary>.menu__list').slicknav({
+    prependTo:'#mobilemenu'
+});
+})(jQuery);

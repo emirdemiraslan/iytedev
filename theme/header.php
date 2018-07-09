@@ -46,15 +46,13 @@
 		</div>
 	</div>
 </div>
-<div id="mobilemenu" class="mobilemenu hidden-md-up">
-	<div class="mobilemenu__head">
-		<a class="close_btn" href="javascript:void(0);"><div class="icon-close-button-white"></div></a>
-	</div>
-	<div class="mobilemenu__body nav">
-		<?php MOZ_Menu::nav_menu('primary'); ?>
+
+<div class="nav--mobile hidden-lg-up">
+				<div id="mobilemenu" class="mobilemenu__body nav">
+		
 	</div>
 </div>
-
+			
 <?php if(!is_front_page() && !is_singular( 'manset' )): ?>
 <header class="header clean_header">
 	<div class="container top">
@@ -69,11 +67,7 @@
 			<div class="nav nav--desktop hidden-md-down">
 				<?php MOZ_Menu::nav_menu('primary'); ?>
 			</div>
-			<div class="nav--mobile hidden-lg-up">
-				<a class="mobile_open" href="javascript:void(0)">
-					<div class="icon-menu-button"></div>
-				</a>
-			</div>
+			
 		</div>
 	</div>
 </header>

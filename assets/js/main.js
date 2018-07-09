@@ -41,6 +41,7 @@ import 'glob:../svg/**/*.svg';
  */
 
 // silly example:
+import './vendor/jquery.slicknav';
 import './scripts/home';
 import './scripts/footermap';
 import './utils/stretch.text';

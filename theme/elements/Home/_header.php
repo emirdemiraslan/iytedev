@@ -12,13 +12,8 @@
 		
 		
 			<div class="nav">
-				<div class="nav--desktop">
+				<div class="nav--desktop hidden-md-down">
 					<?php MOZ_Menu::nav_menu('primary'); ?>
-				</div>
-				<div class="nav--mobile hidden-md-up">
-					<a class="mobile_open" href="javascript:void(0)">
-						<div class="icon-menu-button"></div>
-					</a>
 				</div>
 			</div>
 

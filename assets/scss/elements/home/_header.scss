@@ -10,9 +10,15 @@
         .row{
             .brand{
                 width: 30%;
+                @include media-breakpoint-down(lg){
+                    width: 25%;
+                }
                 &__logo{
                     font-size: 115px;
                     text-shadow: 0px 0px 4px rgba(0,0,0,.7);
+                    @include media-breakpoint-down(lg){
+                        font-size: 90px;
+                    }
                     @include media-breakpoint-down(md){
                         font-size: 9vw;
                     }
@@ -22,6 +28,10 @@
             .nav{
                 width:70%;
                 padding-left: 10%;
+                @include media-breakpoint-down(lg){
+                    width: 75%;
+                    padding-left: 5%;
+                }
 
                 .menu{
                     margin-top: -17px;
