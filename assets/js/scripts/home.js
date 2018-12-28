@@ -26,8 +26,18 @@ import '../vendor/slippry';
     });
 })(jQuery);
 
+
 (function($){
-$('.nav--desktop>.menu--primary>.menu__list').slicknav({
-    prependTo:'#mobilemenu'
-});
+    $(document).ready(function(){
+        $('#mobilemenu .menu__item--has-children>a').on('click',function(e){
+            var target = e.currentTarget;
+            e.preventDefault();
+            $(target).parent().find('.menu__list--submenu').toggleClass('open');
+        });
+
+        $('.toggle-mobile-menu').on('click',function(e){
+            $('#mobilemenu').toggleClass('hidden');
+        })
+
+    })
 })(jQuery);

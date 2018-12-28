@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* eslint-disable import/first */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint import/no-unresolved: [2, { ignore: ['^glob:'] }] */
@@ -40,10 +41,10 @@ import 'glob:../svg/**/*.svg';
  * here...
  */
 
-// silly example:
-import './vendor/jquery.slicknav';
+
 import './scripts/home';
-import './scripts/footermap';
+/*import './scripts/footermap';*/
+import './scripts/rehber';
 import './utils/stretch.text';
 
 /* eslint no-console: 0 */

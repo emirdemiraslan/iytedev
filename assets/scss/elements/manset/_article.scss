@@ -1,7 +1,12 @@
 .post_article{
-    padding: 50px 0;
+    padding: 0 0 50px 0;
     main>section{
         padding: 25px 0;
+    }
+    header{
+        &>.container>.row>.col-12{
+            padding: 0 25px;
+        }
     }
 
     .post_title{
@@ -10,6 +15,7 @@
         margin: 0 0 15px 0;
 
     }
+    
     .postmeta{
         display: flex;
         flex-flow: row nowrap;
@@ -35,34 +41,55 @@
     }
 
     main.content{
-        p, div{
+        p, td, li{
             font-family: 'Roboto Slab', serif;
             color: $c_post_body;
             font-weight: 300;
             text-align: justify;
+            margin-top: 0;
             strong{
                 color: $c_post_body-bold;
                 font-weight: 400;
             }
-        }
-        a{
-            font-weight: 700;
-            color: $c_post_title;
-            text-decoration: underline;
-            &:hover{
-                text-decoration: none;
-                color: $c_post_meta;
+            a{
+                font-weight: 700;
+    
+                color: $c_post_title;
+                text-decoration: underline;
+                &:hover{
+                    text-decoration: none;
+                    color: $c_post_meta;
+                }
             }
         }
         .alignleft{
             float: left;
             margin: 0px 30px 10px 0;
         }
+        .size-thumbnail{
+            .post-template-default &{
+                @include media-breakpoint-up(md){
+                    width: 50%;
+                }
+            }
+        }
+        .size-full{
+            width: 100%;
+            max-width: 100%;
+        }
         h1, h2, h3, h4, h5, h6{
             color: $c_post_title;
             font-family: 'Roboto', sans-serif;
-            text-transform: capitalize;
             margin: 0 0 15px 0;
+        }
+        .wysiwyg.vanilla {
+            padding: 10px 0 0 0;
+            .col-12>p:last-of-type{
+                margin-bottom: 0;
+            }
+            + .wysiwyg{
+                padding-top: 0;
+            }
         }
         .full_bg{
             padding: 35px 0;
@@ -101,6 +128,24 @@
             &__size--half{
                 width: 50%;
                 height: 320px;
+                .post-template-default & {
+                    @include media-breakpoint-down(xl){
+                        height: 225px;
+                        
+                    }
+                    @include media-breakpoint-down(xl){
+                        height: 225px;
+                        
+                    }
+                    @include media-breakpoint-down(lg){
+                        height: 190px;
+                    }
+                    @include media-breakpoint-down(md){
+                        height: 280px;
+                        width: 100%;
+                    }
+
+                }
             }
         }
         .photo_gallery{

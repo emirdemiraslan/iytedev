@@ -1,6 +1,6 @@
 <?php
-/* 
-* Manşet
+/*
+* Template Name: Single FullWidth
 */
 get_header();
 ?>
@@ -11,13 +11,11 @@ get_header();
     <section class="post_content">
         <div class="container">
             <div class="row">
-                <div class="col-xxl-9 col-xl-8 col-md-12">
+                <div class="col-xxl-12 col-xl-12 col-md-12">
 
                     <?php get_template_part( 'elements/post/_article' ); ?>
                 </div>
-                <div class="col-xxl-3 col-xl-4 col-md-12">
-                    <?php get_template_part( 'elements/post/_sidebar' ); ?>
-                </div>
+                
             </div>
         </div>
 

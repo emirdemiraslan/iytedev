@@ -243,3 +243,33 @@ if ( ! function_exists( 'theme_script_add_async_attribute' ) ) {
 		return str_replace( ' src', ' async defer src', $tag );
 	}
 }
+
+add_action( 'elementor_pro/posts/query/tag_filter_all', function( $query ) {
+	// Here we set the query to fetch posts with
+	// post type of 'custom-post-type1' and 'custom-post-type2'
+	$query->set( 'post_type', [ 'haber', 'duyuru', 'manset' ] );
+
+} );
+
+
+/* Rehber search plugin filter for search query */
+function add_query_vars_filter( $vars ) {
+  $vars[] = "searchType";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_query_vars_filter' );
+
+function template_chooser($template)   
+{    
+  global $wp_query;   
+  $search_type = get_query_var('searchType');   
+  if( $wp_query->is_search && $search_type == 'rehber' )   
+  {
+	  $wp_query->is_search=false;
+	  
+    return locate_template('rehber-search.php');  //  redirect to archive-search.php
+  }   
+  return $template;
+}
+//add_filter('pre_get_posts','template_chooser');
+add_filter('template_include', 'template_chooser'); 

@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'iyte_web';
-  src:  url('#{$icomoon-font-path}/iyte_web.eot?2zliw9');
-  src:  url('#{$icomoon-font-path}/iyte_web.eot?2zliw9#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/iyte_web.ttf?2zliw9') format('truetype'),
-    url('#{$icomoon-font-path}/iyte_web.woff?2zliw9') format('woff'),
-    url('#{$icomoon-font-path}/iyte_web.svg?2zliw9#iyte_web') format('svg');
+  src:  url('#{$icomoon-font-path}/iyte_web.eot?yui2hn');
+  src:  url('#{$icomoon-font-path}/iyte_web.eot?yui2hn#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/iyte_web.ttf?yui2hn') format('truetype'),
+    url('#{$icomoon-font-path}/iyte_web.woff?yui2hn') format('woff'),
+    url('#{$icomoon-font-path}/iyte_web.svg?yui2hn#iyte_web') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mobile-menu {
+  &:before {
+    content: $icon-mobile-menu; 
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close; 
+  }
+}
+.icon-close-circle {
+  &:before {
+    content: $icon-close-circle; 
+  }
+}
 .icon-globe-network {
   &:before {
     content: $icon-globe-network; 

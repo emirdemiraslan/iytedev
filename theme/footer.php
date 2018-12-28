@@ -15,55 +15,28 @@
         <div class="row">
             <div class="col-12">
                 <div class="footer__buttons">
+                  <?php
+                  $locations=get_nav_menu_locations();
+                  if(isset($locations['footer'])  )
+                  {
+                    $menu = get_term( $locations['footer'], 'nav_menu' );
+                    $menu_items = wp_get_nav_menu_items($menu->term_id);
+                    foreach( $menu_items as $menu_item ):?>
                     
                     <div class="footer__buttons--item">
-                        <a href="#" class="btn bordered">
-                            <span class="btn__tooltip">Bir Bakışta İYTE</span>
-                            <span class="btn__icon icon-logo-white"></span>
+                        <a href="<?php echo $menu_item->url; ?>" class="btn bordered" <?php echo (($menu_item->target !=="") ? ("target='".$menu_item->target."'") : ""); ?>>
+                            <span class="btn__tooltip"><?php echo $menu_item->title; ?></span>
+                            <?php if(get_field('icon', $menu_item)):?>
+                            <span class="btn__icon <?php echo get_field('icon', $menu_item); ?>"></span>
+                            <?php endif;?>
                         </a>
                     </div>
-                    <div class="footer__buttons--item">
-                        <a href="#" class="btn bordered">
-                            <span class="btn__tooltip">Teknopark İzmir</span>
-                            <span class="btn__icon icon-teknopark-logo"></span>
-                        </a>
-                    </div>
-                    <div class="footer__buttons--item">
-                        <a href="#" class="btn bordered">
-                            <span class="btn__tooltip">AKTS</span>
-                            <span class="btn__icon icon-akts"></span>
-                        </a>
-                    </div>
-                    <div class="footer__buttons--item">
-                        <a href="#" class="btn bordered">
-                            <span class="btn__tooltip">Endüstriyel Hizmet Kataloğu</span>
-                            <span class="btn__icon icon-factory"></span>
-                        </a>
-                    </div>
-                    <div class="footer__buttons--item">
-                        <a href="#" class="btn bordered">
-                            <span class="btn__tooltip">Uluslararası İlişkiler Ofisi</span>
-                            <span class="btn__icon icon-globe-network"></span>
-                        </a>
-                    </div>
-                    <div class="footer__buttons--item">
-                        <a href="#" class="btn bordered">
-                            <span class="btn__tooltip">Kütüphane</span>
-                            <span class="btn__icon icon-book3"></span>
-                        </a>
-                    </div>
-                    <div class="footer__buttons--item">
-                        <a href="#" class="btn bordered">
-                            <span class="btn__tooltip">İYTE Webmail</span>
-                            <span class="btn__icon icon-mail"></span>
-                        </a>
-                    </div>
-                    <div class="footer__buttons--item">
-                        <a href="#" class="btn bordered">
-                            <span class="btn__tooltip">ÖBS</span>
-                            <span class="btn__icon icon-presentation2"></span>
-                        </a>
-                    </div>
+
+
+                  <?php
+                    endforeach;
+                  }
+                  ?>
 
                 </div>
 
@@ -71,12 +44,21 @@
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-12">
+                <?php if(get_locale()=="tr_TR"):?>
                 <div class="footer__contact">
                     <h4>İzmir Yüksek Teknoloji Enstitüsü</h4>
                     <p><span class="icon-location"></span> Gülbahçe Kampüsü 35430 Urla İzmir Türkiye</p>
                     <p><span class="icon-phone"></span> +90 232 750 60 00</p>
                     <p><span class="icon-mail"></span> <a href="mailto:info@iyte.edu.tr">info@iyte.edu.tr</a></p>
                 </div>
+                <?php else:?>
+                <div class="footer__contact">
+                    <h4>İzmir Institute of Technology</h4>
+                    <p><span class="icon-location"></span> Gülbahçe Kampüsü 35430 Urla İzmir Türkiye</p>
+                    <p><span class="icon-phone"></span> +90 232 750 60 00</p>
+                    <p><span class="icon-mail"></span> <a href="mailto:info@iyte.edu.tr">info@iyte.edu.tr</a></p>
+                </div>
+                <?php endif;?>
             </div>
             <div class="col-lg-9 col-md-12">
                 <div class="footer__map" id="footer_map">
@@ -88,7 +70,11 @@
         <div class="row">
             <div class="col-12">
                 <div class="footer__copyright">
-                    © Copyright İzmir Yüksek Teknoloji Enstitüsü - 2018
+                  <?php if(get_locale()=="tr_TR"):?>
+                    © Copyright İzmir Yüksek Teknoloji Enstitüsü - <?php echo date("Y"); ?>
+                  <?php else:?>
+                  © Copyright İzmir Institute of Technology - <?php echo date("Y"); ?>
+                  <?php endif;?> 
                 </div>
             </div>
         </div>

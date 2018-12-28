@@ -61,6 +61,12 @@ class MOZ_Menu {
 		if ( isset( $extras['wrap_class'] ) ) {
 			$wrap_class .= " {$extras['wrap_class']}";
 		}
+		$walker = new MOZ_Walker_Nav_Menu;
+
+		if( isset($extras['selective_menu']) ){
+			$walker = new MOZ_Selective_Nav_Menu;
+			
+		}
 
 		return wp_nav_menu( array_merge( array(
 			'echo'             => false,
@@ -71,7 +77,7 @@ class MOZ_Menu {
 			'show_level_class' => $show_level_class,
 			'items_wrap'       => "<ul class=\"{$wrap_class}\">%3\$s</ul>",
 			'fallback_cb'      => false,
-			'walker'           => new MOZ_Walker_Nav_Menu,
+			'walker'           => $walker,
 		), $extras ) );
 	}
 

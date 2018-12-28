@@ -28,6 +28,7 @@ spl_autoload_register( function ( $class ) {
 	$class = str_replace( '_', '-', $class );
 
 	$path = "class-$class.php";
+	
 
 	foreach ( array( '' ) as $dir ) {
 		if ( ! empty( $dir ) ) {

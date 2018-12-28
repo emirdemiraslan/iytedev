@@ -4,9 +4,9 @@
             <div class="newsbox etkinlik">
                 <div class="newsbox__header justify-content-between align-items-center">
                     <h1 class="newsbox__header--title">
-                        Etkinkliker
+                        Etkinliker
                     </h1>
-                    <a href="#" class="newsbox__header--link_all">Tüm Etkinkliker</a>
+                    <a href="#" class="newsbox__header--link_all">Tüm Etkinliker</a>
                 </div>
                 <div class="newsbox__container">
                     <ul class="newsbox__list">
@@ -41,58 +41,13 @@
         </div>
         <div class="col-lg-4 col-md-12">
             
-            <div class="newsbox haberler">
-                <div class="newsbox__header justify-content-between align-items-center">
-                    <h1 class="newsbox__header--title">
-                        haberler
-                    </h1>
-                    <a href="#" class="newsbox__header--link_all">Tüm Haberler</a>
-                </div>
-                <div class="newsbox__container">
-                    <ul class="newsbox__list">
-                        <li class="newsbox__list-item ">
-                            <a class="newsitem" href="#">
-                                
-                                <div class="newsitem__thumb">
-                                    <img src="/wp-content/uploads/2018/06/11A1941-70x70.jpg" alt="">
-                                </div>
-                                <div class="newsitem__body">
-                                    <h3 class="newsitem__title">Bedenimizin Sessiz Dili</h3>
-                                    <p class="newsitem__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus neque sodales viverra porta. Cras cursus, nisl et semper tempus, ligula risus pulvinar risus, nec ultrices ligula nulla viverra orci. Nulla facilisi. Phasellus luctus ex at iaculis fringilla. Maecenas urna eros, mattis vel arcu at, sollicitudin dignissim est.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="newsbox__list-item ">
-                            <a class="newsitem" href="#">
-                                
-                                <div class="newsitem__thumb">
-                                    <img src="/wp-content/uploads/2018/06/11A1941-70x70.jpg" alt="">
-                                </div>
-                                <div class="newsitem__body">
-                                    <h3 class="newsitem__title">Bedenimizin Sessiz Dili</h3>
-                                    <p class="newsitem__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus neque sodales viverra porta. Cras cursus, nisl et semper tempus, ligula risus pulvinar risus, nec ultrices ligula nulla viverra orci. Nulla facilisi. Phasellus luctus ex at iaculis fringilla. Maecenas urna eros, mattis vel arcu at, sollicitudin dignissim est.</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="newsbox__list-item ">
-                            <a class="newsitem" href="#">
-                                
-                                <div class="newsitem__thumb">
-                                    <img src="/wp-content/uploads/2018/06/11A1941-70x70.jpg" alt="">
-                                </div>
-                                <div class="newsitem__body">
-                                    <h3 class="newsitem__title">Bedenimizin Sessiz Dili</h3>
-                                    <p class="newsitem__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus neque sodales viverra porta. Cras cursus, nisl et semper tempus, ligula risus pulvinar risus, nec ultrices ligula nulla viverra orci. Nulla facilisi. Phasellus luctus ex at iaculis fringilla. Maecenas urna eros, mattis vel arcu at, sollicitudin dignissim est.</p>
-                                </div>
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
+            
+            <?php echo do_shortcode('[newsbox post_type="haber"]'); ?>
             
         </div>
         <div class="col-lg-4 col-md-12">
+            <!--<?php echo do_shortcode('[newsbox post_type="duyuru"]'); ?>-->
+            
             <div class="newsbox duyurular">
                 <div class="newsbox__header justify-content-between align-items-center">
                     <h1 class="newsbox__header--title">
@@ -126,6 +81,7 @@
                     </ul>
                 </div>
             </div>
+            
         </div>
     </div>
 </div>

@@ -14,7 +14,7 @@
         </div>
         <div class="card img-cover" style="background-image:url(/wp-content/uploads/2018/06/IMG_2011-opt-348x232.jpg)">
             <a href="#" class="card__link overlay">
-                <h3 class="card__title">LABOTATUVAR ALTYAPISI</h3>
+                <h3 class="card__title">LABORATUVAR ALTYAPISI</h3>
             </a>
              
         </div>
