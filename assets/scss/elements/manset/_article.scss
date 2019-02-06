@@ -65,6 +65,16 @@
         .alignleft{
             float: left;
             margin: 0px 30px 10px 0;
+            @include media-breakpoint-down(md){
+                margin: 20px 0;
+            }
+        }
+        .alignright{
+            float: right;
+            margin: 0px 0px 10px 30px;
+            @include media-breakpoint-down(md){
+                margin: 20px 0;
+            }
         }
         .size-thumbnail{
             .post-template-default &{

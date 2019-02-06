@@ -58,7 +58,7 @@
 							<a href="https://facebook.com/IYTEM" target="_blank"><span class="icon-facebook"></span></a>
 							<a href="https://twitter.com/iyteedutr" target="_blank"><span class="icon-twitter"></span></a>
 							<a href="https://instagram.com/iyteedutr" target="_blank"><span class="icon-instagram"></span></a>
-							<a href="https://www.youtube.com/user/iyteiztech" target="_blank"><span class="icon-youtube"></span></a>
+							<a href="https://www.youtube.com/channel/UCSWVrihXDCUqwa-MlPTTAug" target="_blank"><span class="icon-youtube"></span></a>
 							<a href="https://www.flickr.com/photos/iyte-iztech/" target="_blank"><span class="icon-flickr"></span></a>
 							<a href="https://www.linkedin.com/school/i%CC%87zmir-y%C3%BCksek-teknoloji-enstit%C3%BCs%C3%BC/" target="_blank"><span class="icon-linkedin"></span></a>
 						</div>
@@ -99,8 +99,15 @@
 				<span class="icon-close-circle"></span>
 			</a>
 		</div>
+		<div class="topmenu__lang">
+			<?php if(get_locale()=="tr_TR"):?>
+			<a class="hover__animate" href="http://en.iyte.edu.tr">visit site in English</a>
+			<?php else:?>
+			<a class="hover__animate" href="http://iyte.edu.tr">Türkçe siteyi ziyaret edin</a>
+			<?php endif;?>
+		</div>
 		<?php MOZ_Menu::nav_menu('primary'); ?>
-		<h3 class="title">Kolay Erişim</h3>
+		<h3 class="title"><?php echo (get_locale()=="tr_TR") ? "Kolay Erişim":"Quick Links";?></h3>
 		<?php MOZ_Menu::nav_menu('top_menu'); ?>
 		<div class="nav nav--social">
 							<a href="https://facebook.com/IYTEM" target="_blank"><span class="icon-facebook"></span></a>
@@ -112,31 +119,6 @@
 						</div>
 	</div>
 </div>
-<!--			
-<?php if(!is_front_page() && !is_singular( 'manset' )): ?>
-<header class="header clean_header">
-	<div class="container top">
-		<div class="row justify-content-between align-items-center">
-			<div class="brand">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<img class="logo" src="<?php echo get_template_directory_uri()."/assets/svg/logo-colored-full-v.svg"; ?>" alt="İzmir Yüksek Teknoloji Enstitiüsü">
-			</a>
-			</div>
-		
-		
-			<div class="nav nav--desktop hidden-md-down">
-				<?php MOZ_Menu::nav_menu('primary'); ?>
-			</div>
-			<div class="toggle-mobile-menu hidden-lg-up">
-				<a href="javascript:void(0);">
-					<span class="icon-mobile-menu"></span>
-				</a>
-			</div>
-			
-		</div>
-	</div>
-</header>
-<?php endif; ?>
--->
+
 
 <?php // Common header content goes here. ?>

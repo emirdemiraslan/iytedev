@@ -29,16 +29,28 @@
                                     <table id="rehber_table" class="tablepress eael-data-table">
                                         <thead>
                                             <tr class="table-header">
+                                            <?php if(get_locale()=="tr_TR"):?>
                                                 
                                                 <th style="background-color:#5f87a5">Adı Soyadı</th>
-                                                <th>Ünvan</th>
+                                                <th>Unvan</th>
                                                 <th>Birim</th>
                                                 <th>Telefon</th>
                                                 <th>Oda No</th>
-                                                <th>Fax</th>
+                                                <th>Faks</th>
                                                 <th>Birim Telefon</th>
                                                 <th>E-posta</th>
                                                 <th>Web Sitesi</th>
+                                            <?php else:?>
+                                                <th style="background-color:#5f87a5">Name and Surname</th>
+                                                <th>Title</th>
+                                                <th>Branch</th>
+                                                <th>Phone</th>
+                                                <th>Room Number</th>
+                                                <th>Fax</th>
+                                                <th>Brnach Phone</th>
+                                                <th>E-Mail</th>
+                                                <th>Web</th>
+                                            <?php endif;?>
                                             </tr>
                                         </thead>
                                         <tbody class="row-hover">

@@ -11,6 +11,7 @@ import '../vendor/slippry';
             // options
             adaptiveHeight: true, // height of the sliders adapts to current 
             captions: false,
+            preload:'all',
     
             // pager
             //pagerClass: 'news-pager',

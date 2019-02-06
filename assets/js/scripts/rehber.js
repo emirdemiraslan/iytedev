@@ -40,7 +40,7 @@
                 row.append($("<td>" + kisi['Oda No'] + "</td>"));
                 row.append($("<td>" + kisi['Faks'] + "</td>"));
                 row.append($("<td>" + kisi['Birim Telefon'] + "</td>"));
-                if(kisi['E-Posta'])
+                if(kisi['E-Posta'].length>1)
                 {
     
                     row.append($("<td style='text-align:center'> <a href='mailto:" + kisi['E-Posta'] + "'><i class='fa fa-envelope'></i></a> </td>"));
@@ -48,9 +48,9 @@
                 else{
                     row.append($('<td/>'));
                 }
-                if(kisi['Web Sayfa']){
+                if(kisi['Web Sayfa'].length>7){
     
-                    row.append($("<td  style='text-align:center'> <a href='" + kisi['Web Sayfa'] + "'><i class='icon - globe - network'></i></a> </td>"));
+                    row.append($("<td  style='text-align:center'> <a href='" + kisi['Web Sayfa'] + "' target='_blank' style='text-decoration:none'><i class='icon-globe-network'></i></a></td>"));
                 }
                 else{
                     row.append($('<td/>'));
@@ -66,7 +66,7 @@
             function search() {
                 clearTable();
                 var formData = {
-                    "langid": "tr",
+                    "langid": $('html').attr('lang') == 'tr_TR' ? "tr":"en",
                     "qj": form.find('input.search-field').val()
                 }
                 $.ajax({

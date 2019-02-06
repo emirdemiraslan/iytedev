@@ -295,6 +295,15 @@ a{
         justify-content: space-around;
         padding: 10px 20px;
     }
+
+    .topmenu__lang a {
+        font-size: 14px;
+        font-style: italic;
+        color: #4d4d4d;
+        position: absolute;
+        top: 21px;
+        left: 24px;
+    }
 }
 
 
@@ -393,8 +402,8 @@ a{
     #featured_news &{
         height:100%;
         max-height: 560px;
-        @include media-breakpoint-down(lg){
-            max-height: 60vw;
+        @include media-breakpoint-down(xl){
+            max-height: 45vw;
         }
     }
 }

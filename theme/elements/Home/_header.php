@@ -1,4 +1,4 @@
-<!--<?php get_template_part( 'elements/global/_hero_header' ); ?>-->
+<!--<?php //get_template_part( 'elements/global/_hero_header' ); ?>-->
 
 <?php
 $args = array(
