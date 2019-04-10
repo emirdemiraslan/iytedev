@@ -9,7 +9,7 @@ $args = array(
 $manset = get_posts( $args );
 ?>
 
-<section id="featured_news">
+<section id="featured_news" class="hide">
 
 <?php foreach($manset as $m):
 	$has_content = (strlen($m->post_content)>0);
@@ -17,6 +17,7 @@ $manset = get_posts( $args );
  
 	
 	<article id="news-slug-<?php echo $m->ID;?>" class="featured img-cover" style="background-image:url(<?php echo get_the_post_thumbnail_url($m->ID, 'full')?>)">
+	
 	<?php if($has_content):?><a href="<?php echo get_the_permalink($m->ID); ?>"><?php endif;?>
 			<div class="container">
 				<div class="row justify-content-<?php the_field('yatay_hizalama', $m->ID); ?> align-items-<?php the_field('dikey_hizalama', $m->ID); ?>" >
@@ -40,6 +41,7 @@ $manset = get_posts( $args );
 				</div>
 			</div>
 		<?php if($has_content):?></a><?php endif;?>
+		<img width="1" height="1" src="<?php echo get_the_post_thumbnail_url($m->ID, 'full')?>" alt="" style="display:none !important"/>
 	</article>
 <?php endforeach;?>
 

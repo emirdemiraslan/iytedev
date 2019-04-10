@@ -11,7 +11,7 @@ import '../vendor/slippry';
             // options
             adaptiveHeight: true, // height of the sliders adapts to current 
             captions: false,
-            preload:'all',
+            //preload:'all',
     
             // pager
             //pagerClass: 'news-pager',
@@ -22,7 +22,12 @@ import '../vendor/slippry';
             easing:'easeInOutSine',
     
             // slideshow
-            autoDirection: 'next'
+            autoDirection: 'next',
+            onSliderLoad:function(index){
+                console.log("index: "+index);
+                $('#featured_news').removeClass('hide');
+
+            }
         });
     });
 })(jQuery);

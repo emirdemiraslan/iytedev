@@ -106,6 +106,22 @@
 			<a class="hover__animate" href="http://iyte.edu.tr">Türkçe siteyi ziyaret edin</a>
 			<?php endif;?>
 		</div>
+		<div class="header-search">
+			<form id="search_form" action="<?php echo esc_url( home_url('/') ); ?>">
+				<div class="search_form_wrapper">
+					<input type="search" class="search-field" placeholder="<?php echo ((get_locale()=="tr_TR") ? 'Ara...':'Search...');?>" value="" name="s">
+					<button><i class="fa fa-search"></i></button>
+				</div>
+				<span class="search_radio_wrapper">
+						<label title="<?php echo ((get_locale()=="tr_TR") ? 'Rehberde Ara':'Staff Search');?>">
+							<input name="searchType" type="radio"  value="rehber" checked><i class="fa fa-users"></i>
+						</label>
+						<label title="<?php echo ((get_locale()=="tr_TR") ? 'Sitede Ara':'Site Search');?>">
+							<input type="radio" name="searchType" value="s" ><i class="fa fa-sitemap"></i>
+						</label>
+					</span>
+			</form>
+		</div>
 		<?php MOZ_Menu::nav_menu('primary'); ?>
 		<h3 class="title"><?php echo (get_locale()=="tr_TR") ? "Kolay Erişim":"Quick Links";?></h3>
 		<?php MOZ_Menu::nav_menu('top_menu'); ?>

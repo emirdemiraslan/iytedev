@@ -255,6 +255,7 @@ add_action( 'elementor_pro/posts/query/tag_filter_all', function( $query ) {
 /* Rehber search plugin filter for search query */
 function add_query_vars_filter( $vars ) {
   $vars[] = "searchType";
+  $vars[] = "failed";
   return $vars;
 }
 add_filter( 'query_vars', 'add_query_vars_filter' );
@@ -273,3 +274,29 @@ function template_chooser($template)
 }
 //add_filter('pre_get_posts','template_chooser');
 add_filter('template_include', 'template_chooser'); 
+
+/*add custom fields back on*/
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');
+
+/* Custom login fail redirect */
+add_filter( 'authenticate', function( $user, $username, $password ) {
+    // forcefully capture login failed to forcefully open wp_login_failed action, 
+    // so that this event can be captured
+    if ( empty( $username ) || empty( $password ) ) {
+        do_action( 'wp_login_failed', $user );
+    }
+    return $user;
+}, 30, 3 );
+add_action( 'wp_login_failed', 'pippin_login_fail' );  // hook failed login
+function pippin_login_fail( $username ) {
+	
+	 //$referrer = ;  // where did the post submission come from?
+	 $bits = explode('?',wp_get_referer());
+		
+	 $referrer = $bits[0];
+     // if there's a valid referrer, and it's not the default log-in screen
+     if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
+          wp_safe_redirect($referrer . '?failed=true' );  // let's append some information (login=failed) to the URL for the theme to use
+          exit;
+     }
+}

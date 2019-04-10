@@ -82,8 +82,8 @@
         min-height: 560px;
         max-height: 560px;
         @include media-breakpoint-down(xl){
-            min-height: 45vw;
-            max-height: 45vw;
+            min-height: 50vw;
+            max-height: 50vw;
         }
         &.sy-loading{
             background: url(../img/loader.gif) 50% 50% no-repeat;
@@ -93,12 +93,12 @@
         .sy-slides-crop{
             min-height: 560px;
             @include media-breakpoint-down(xl){
-                min-height: 45vw;
+                min-height: 50vw;
             }
             section{
                 min-height: 560px;
                 @include media-breakpoint-down(xl){
-                    min-height: 45vw;
+                    min-height: 50vw;
                 }
             }
         }
@@ -167,7 +167,7 @@
 
                 padding: 100px;
                 @include media-breakpoint-down(xl){
-                    height: 45vw;
+                    height: 50vw;
                     padding: 50px;
                 }
                 @include media-breakpoint-down(sm){
@@ -208,6 +208,10 @@
             font-size: 16px;
 
             }
+        }
+
+        .sy-filler{
+            padding-top: 37.3333% !important; 
         }
         
     }

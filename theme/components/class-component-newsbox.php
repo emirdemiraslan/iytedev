@@ -64,7 +64,7 @@ class Component_Newsbox {
                 $html .='</div>
                 <div class="newsbox__container">';
                 if ($post_type == 'etkinlik'){
-                    $html .= do_shortcode( '[add_eventon_el event_order="DESC" hide_mult_occur="yes" number_of_months="12" event_count="4" event_type="24,38,39" etc_override="yes" hide_so="yes" ]' );
+                    $html .= do_shortcode( '[add_eventon_el event_order="ASC" hide_mult_occur="yes" number_of_months="12" event_count="4" event_type="24,38,39" etc_override="yes" hide_so="yes" ]' );
                 }
                 else{
                     $html .='<ul class="newsbox__list">';
