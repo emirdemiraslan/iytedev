@@ -45,9 +45,9 @@
 				<div class="top_right align-self-start hidden-md-down">
 					<div class="topmenu__lang">
 						<?php if(get_locale()=="tr_TR"):?>
-						<a class="hover__animate" href="http://en.iyte.edu.tr">visit site in English</a>
+						<a class="hover__animate" href="https://en.iyte.edu.tr">visit site in English</a>
 						<?php else:?>
-						<a class="hover__animate" href="http://iyte.edu.tr">Türkçe siteyi ziyaret edin</a>
+						<a class="hover__animate" href="https://iyte.edu.tr">Türkçe siteyi ziyaret edin</a>
 						<?php endif;?>
 					</div>
 					<div class="topmenu__quick">
@@ -129,7 +129,7 @@
 							<a href="https://facebook.com/IYTEM" target="_blank"><span class="icon-facebook"></span></a>
 							<a href="https://twitter.com/iyteedutr" target="_blank"><span class="icon-twitter"></span></a>
 							<a href="https://instagram.com/iyteedutr" target="_blank"><span class="icon-instagram"></span></a>
-							<a href="https://www.youtube.com/user/iyteiztech" target="_blank"><span class="icon-youtube"></span></a>
+							<a href="https://www.youtube.com/channel/UCSWVrihXDCUqwa-MlPTTAug" target="_blank"><span class="icon-youtube"></span></a>
 							<a href="https://www.flickr.com/photos/iyte-iztech/" target="_blank"><span class="icon-flickr"></span></a>
 							<a href="https://www.linkedin.com/school/i%CC%87zmir-y%C3%BCksek-teknoloji-enstit%C3%BCs%C3%BC/" target="_blank"><span class="icon-linkedin"></span></a>
 						</div>

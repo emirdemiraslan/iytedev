@@ -71,7 +71,7 @@
                 }
                 $.ajax({
                     type: 'GET',
-                    url: 'http://rehber.iyte.edu.tr/index.php',
+                    url: 'https://rehber.iyte.edu.tr/index.php',
                     data: formData,
                     dataType: 'json',
                     success: function (result) {

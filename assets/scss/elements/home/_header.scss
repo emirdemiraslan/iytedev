@@ -82,6 +82,10 @@
         min-height: 560px;
         max-height: 560px;
         @include media-breakpoint-down(xl){
+            min-height: 40vw;
+            max-height: 40vw;
+        }
+        @include media-breakpoint-down(md){
             min-height: 50vw;
             max-height: 50vw;
         }
@@ -93,11 +97,17 @@
         .sy-slides-crop{
             min-height: 560px;
             @include media-breakpoint-down(xl){
+                min-height: 40vw;
+            }
+            @include media-breakpoint-down(md){
                 min-height: 50vw;
             }
             section{
                 min-height: 560px;
                 @include media-breakpoint-down(xl){
+                    min-height: 40vw;
+                }
+                @include media-breakpoint-down(md){
                     min-height: 50vw;
                 }
             }
@@ -167,6 +177,9 @@
 
                 padding: 100px;
                 @include media-breakpoint-down(xl){
+                    height: 40vw;
+                    padding: 40px;
+                }@include media-breakpoint-down(md){
                     height: 50vw;
                     padding: 50px;
                 }
