@@ -25,7 +25,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-euf-type {
+  &:before {
+    content: $icon-euf-type; 
+  }
+}
+.icon-euf {
+  &:before {
+    content: $icon-euf;
+  }
+}
 .icon-cimer-bw {
   &:before {
     content: $icon-cimer-bw; 

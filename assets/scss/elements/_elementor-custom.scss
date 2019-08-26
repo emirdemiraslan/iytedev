@@ -54,6 +54,13 @@ body .elementor-widget-heading.elementor-widget-heading .elementor-heading-title
     color: $c_post_title;
 }
 
+.elementor-text-editor{
+	img.alignleft {
+		float: left;
+    	margin: 0 30px 10px 0;
+	}
+}
+
 //Timeline
 .eael-content-timeline-container{
     padding: 0;
