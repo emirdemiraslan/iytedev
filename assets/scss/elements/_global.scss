@@ -414,9 +414,11 @@ a{
         max-height: 560px;
         @include media-breakpoint-down(xl){
             max-height: 40vw;
+            background-size: contain;
         }
         @include media-breakpoint-down(md){
-            max-height: 50vw;
+            max-height: 37.4vw;
+            background-size: contain;
         }
     }
 }
@@ -554,13 +556,14 @@ a{
     }
     &__icon{
         @include centerer("xy");
-        font-size: 32px;
+        font-size: 32px; 
         &::before{
 
                 color: #fff;
             }
         
     }
+    
 }
 
 table{
