@@ -263,12 +263,12 @@ add_filter( 'query_vars', 'add_query_vars_filter' );
 function template_chooser($template)   
 {    
   global $wp_query;   
-  $search_type = get_query_var('searchType');   
+  $search_type = sanitize_text_field( get_query_var('searchType') );   
   if( $wp_query->is_search && $search_type == 'rehber' )   
   {
 	  $wp_query->is_search=false;
 	  
-    return locate_template('rehber-search.php');  //  redirect to archive-search.php
+    return locate_template('rehber-search.php');  //  redirect to asrchive-search.php
   }   
   return $template;
 }

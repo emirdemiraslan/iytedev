@@ -413,7 +413,7 @@ a{
         height:100%;
         max-height: 560px;
         @include media-breakpoint-down(xl){
-            max-height: 40vw;
+            max-height: 37.4vw;
             background-size: contain;
         }
         @include media-breakpoint-down(md){

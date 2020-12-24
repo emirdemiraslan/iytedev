@@ -188,6 +188,7 @@
                 }
                 &.justify-content-end .featured__title span {
                     float: right;
+                    clear: right;
                     margin-top: 5px;
                     padding: 0px 10px;
                 }
@@ -201,7 +202,7 @@
                     line-height: 240%;
                     align-self: center;
                 }
-                span, br{
+                span{
                     background-color: #000;
                     padding: 10px;
                     

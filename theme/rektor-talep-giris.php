@@ -1,7 +1,7 @@
 <?php
         /*Template Name: Rektör Talep Giriş*/
         get_header();
-        $is_error = get_query_var('failed');
+        $is_error = sanitize_text_field( get_query_var('failed') );
        
         if(is_user_logged_in() && !is_admin()){
 

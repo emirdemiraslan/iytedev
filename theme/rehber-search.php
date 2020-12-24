@@ -1,7 +1,7 @@
 <?php
         /*Template Name: Rehber Search */
         get_header();
-        $kisi = get_query_var('s');
+        $kisi = sanitize_text_field(get_query_var('s'));
 ?>
 <main id="rehber_search" class="rehber_search">  
     <section class="post_content">
