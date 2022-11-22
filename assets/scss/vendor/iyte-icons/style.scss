@@ -25,6 +25,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-hrs4r {
+  &:before {
+    content: $icon-hrs4r;     
+    color: #fff;
+  }
+}
 .icon-euf-type {
   &:before {
     content: $icon-euf-type; 
