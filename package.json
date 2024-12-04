@@ -56,7 +56,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "getcomposer": "^1.3.3",
-    "gulp": "3.9.1",
+    "gulp": "4.0.2",
     "gulp-add": "0.0.2",
     "gulp-favicons": "^2.3.0",
     "gulp-filter": "5.0.0",
