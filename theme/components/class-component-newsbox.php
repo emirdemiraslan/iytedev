@@ -26,7 +26,8 @@ class Component_Newsbox {
         $pto = get_post_type_object( $post_type );
         if($post_type == "etkinlik"){
             $pto = new stdClass;
-            $pto ->labels->name="Etkinlikler";
+            $label_name = get_locale()=="tr_TR" ? "Etkinlikler" : "Events";
+            $pto ->labels->name= $label_name;
             $pto ->labels->singular_name="etkinlik-takvimi";//slug for archive
         }
         if(is_null($pto)){
@@ -64,7 +65,8 @@ class Component_Newsbox {
                 $html .='</div>
                 <div class="newsbox__container">';
                 if ($post_type == 'etkinlik'){
-                    $html .= do_shortcode( '[add_eventon_el event_order="ASC" hide_mult_occur="yes" number_of_months="12" event_count="4" event_type="24,38,39" etc_override="yes" hide_so="yes" ]' );
+                    $event_lang = get_locale() == "tr_TR" ? "L1" : "L2";
+                    $html .= do_shortcode( '[add_eventon_el event_order="ASC" hide_mult_occur="yes" number_of_months="12" event_count="4" event_type="24,38,39" etc_override="yes" hide_so="yes" lang="'.$event_lang.'" ]' );
                 }
                 else{
                     $html .='<ul class="newsbox__list">';
