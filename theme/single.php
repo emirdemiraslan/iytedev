@@ -5,7 +5,7 @@
 get_header();
 ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<main id="<?php echo "post_".get_the_ID(); ?>">
+<main id="main-content" tabindex="-1" data-post-id="<?php echo "post_".get_the_ID(); ?>">
     
     <!--article-->
     <section class="post_content">

@@ -6,7 +6,7 @@ get_header();
 ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<main id="<?php echo "manset_".get_the_ID(); ?>">
+<main id="main-content" tabindex="-1" data-manset-id="<?php echo "manset_".get_the_ID(); ?>">
     <section id="manset_header" class="section hero hero_header">
         <?php get_template_part( 'elements/manset/_header' ); ?>
     </section>

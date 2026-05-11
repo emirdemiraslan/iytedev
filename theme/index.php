@@ -10,7 +10,7 @@
 <?php get_header(); ?>
 
 	<?php while ( have_posts() ): the_post(); ?>
-<main id="<?php echo "page_".get_the_ID(); ?>">
+<main id="main-content" tabindex="-1" data-page-id="<?php echo "page_".get_the_ID(); ?>">
     
     <!--article-->
     <section class="post_content">

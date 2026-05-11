@@ -8,6 +8,7 @@
 ?>
 <?php get_header(); ?>
 
+<main id="main-content" tabindex="-1">
 <h1 style="text-align:center;padding:200px 0;color:#4d4d4d;">
 <span style="font-size: 5em;margin-bottom: 50px;display: inline-block;">404</span><br/>
 <span>
@@ -19,5 +20,6 @@
 ?>
 </span>
 </h1>
+</main>
 
 <?php get_footer();
