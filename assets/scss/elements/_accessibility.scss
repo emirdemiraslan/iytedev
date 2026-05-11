@@ -1,0 +1,161 @@
+/*
+ * Accessibility additions for iyte_dev theme.
+ * Compiled into main.css via the SCSS build pipeline.
+ * Imported from assets/scss/main.scss.
+ *
+ * Goal: WCAG 2.1 Level A compliance (and reasonable AA wins)
+ * without altering the visual appearance of the site.
+ *
+ * Conventions used here:
+ *  - Visually invisible by default (skip-link, screen-reader-text)
+ *  - Only visible when keyboard focus is active (focus indicators)
+ *  - prefers-reduced-motion overrides (only triggered if OS setting is on)
+ */
+
+/* -------------------------------------------------------------------------
+ * Skip link — first focusable element on the page.
+ * Hidden off-screen until receives keyboard focus.
+ * ------------------------------------------------------------------------- */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 100000;
+    padding: 12px 20px;
+    background: #ffffff;
+    color: #003366;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    border: 2px solid #003366;
+    border-radius: 0 0 4px 0;
+    transition: top 0.15s ease-out;
+
+    &:focus,
+    &:focus-visible {
+        top: 0;
+        outline: 3px solid #ffd400;
+        outline-offset: 2px;
+    }
+}
+
+/* -------------------------------------------------------------------------
+ * Screen-reader-only utility (WordPress standard).
+ * Visually hidden, still announced by screen readers.
+ * ------------------------------------------------------------------------- */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+    white-space: nowrap;
+
+    &:focus {
+        background-color: #ffffff;
+        clip: auto !important;
+        -webkit-clip-path: none;
+        clip-path: none;
+        color: #003366;
+        display: block;
+        font-size: 1em;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000;
+    }
+}
+
+/* -------------------------------------------------------------------------
+ * Focus indicators.
+ * :focus-visible triggers only on keyboard navigation (not mouse clicks),
+ * so existing visual design is preserved for mouse users.
+ * ------------------------------------------------------------------------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid #ffd400;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 1px #003366;
+}
+
+/* Some theme styles use `outline: none !important` on search field;
+ * restore keyboard-visible focus for those without removing the !important
+ * (we add !important too, scoped to :focus-visible). */
+.search-field:focus-visible,
+input[type="radio"]:focus-visible,
+input[type="checkbox"]:focus-visible {
+    outline: 3px solid #ffd400 !important;
+    outline-offset: 2px !important;
+}
+
+/* -------------------------------------------------------------------------
+ * Reduced motion support.
+ * For users with vestibular disorders or motion sensitivity (OS-level setting).
+ * Disables auto-playing animations including the manşet slider.
+ * ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* -------------------------------------------------------------------------
+ * Slider accessibility controls (pause/play/prev/next buttons).
+ * Reuses theme's icon font sizing; small, unobtrusive controls.
+ * Position can be customised when the slider markup is finalised.
+ * ------------------------------------------------------------------------- */
+.a11y-slider-controls {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 50;
+    display: flex;
+    gap: 6px;
+
+    button {
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        background: rgba(0, 0, 0, 0.55);
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 50%;
+        cursor: pointer;
+        line-height: 1;
+        font-size: 14px;
+
+        &:hover,
+        &:focus-visible {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------
+ * Ensure focus styles work inside the manşet (high-contrast slide bg).
+ * ------------------------------------------------------------------------- */
+.manset a:focus-visible,
+.element__manset a:focus-visible {
+    outline: 3px solid #ffffff;
+    box-shadow: 0 0 0 5px #003366;
+}

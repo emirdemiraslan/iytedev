@@ -45,6 +45,7 @@ import 'glob:../svg/**/*.svg';
 import './scripts/home';
 /*import './scripts/footermap';*/
 import './scripts/rehber';
+import './scripts/accessibility';
 import './utils/stretch.text';
 
 /* eslint no-console: 0 */

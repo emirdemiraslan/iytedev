@@ -91,3 +91,10 @@
 @import "elements/home/home";
 @import "elements/manset/manset";
 @import "elements/rehber-search";
+
+
+/**
+ * Accessibility additions
+ * (WCAG 2.1 A + reasonable AA — see _accessibility.scss for details)
+ */
+@import "elements/accessibility";
