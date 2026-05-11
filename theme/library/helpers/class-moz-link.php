@@ -90,10 +90,13 @@ class MOZ_Link {
 
 
 	/**
-	 * Add rel="nofollow"
+	 * Add rel="nofollow noopener noreferrer"
 	 * to the given attribute
 	 * array if the specified
 	 * href is external
+	 *
+	 * The noopener/noreferrer additions are required for security and
+	 * accessibility when the link opens in a new tab.
 	 *
 	 * @param array $attrs Array of html anchor attributes.
 	 *
@@ -105,7 +108,15 @@ class MOZ_Link {
 			&& ! empty( $attrs['href'] )
 			&& ! wp_validate_redirect( $attrs['href'], false )
 		) {
-			$attrs['rel'] = 'nofollow';
+			$rel_parts = isset( $attrs['rel'] ) && ! empty( $attrs['rel'] )
+				? array_filter( array_map( 'trim', explode( ' ', $attrs['rel'] ) ) )
+				: array();
+			foreach ( array( 'nofollow', 'noopener', 'noreferrer' ) as $token ) {
+				if ( ! in_array( $token, $rel_parts, true ) ) {
+					$rel_parts[] = $token;
+				}
+			}
+			$attrs['rel'] = implode( ' ', $rel_parts );
 		}
 
 		return $attrs;

@@ -99,11 +99,26 @@ class MOZ_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 		$output .= "<li class=\"$item_classes_str\">";
 
+		// Determine target and rel for external links.
+		$link_target = $item->target;
+		$link_rel    = $item->xfn;
+		$is_external = ( '_blank' === $link_target );
+		if ( $is_external ) {
+			$rel_parts = array_filter( array_map( 'trim', explode( ' ', $link_rel ) ) );
+			if ( ! in_array( 'noopener', $rel_parts, true ) ) {
+				$rel_parts[] = 'noopener';
+			}
+			if ( ! in_array( 'noreferrer', $rel_parts, true ) ) {
+				$rel_parts[] = 'noreferrer';
+			}
+			$link_rel = implode( ' ', $rel_parts );
+		}
+
 		// Menu Link.
 		$attrs = array_filter( array(
 				'title'  => $item->attr_title,
-				'target' => $item->target,
-				'rel'    => $item->xfn,
+				'target' => $link_target,
+				'rel'    => $link_rel,
 				'href'   => ( ! empty( $item->url ) && '#' !== $item->url ) ? $item->url : '',
 				'class'  => "{$args->menu_class}__link",
 			), function ( $attr ) {
@@ -112,6 +127,12 @@ class MOZ_Walker_Nav_Menu extends Walker_Nav_Menu {
 				return ! empty( $attr );
 			}
 		);
+
+		// ARIA attributes for parent menu items with submenus.
+		if ( isset( $item->has_children ) && $item->has_children ) {
+			$attrs['aria-haspopup'] = 'true';
+			$attrs['aria-expanded'] = 'false';
+		}
 
 		$tag = isset( $attrs['href'] ) ? 'a' : 'span';
 
