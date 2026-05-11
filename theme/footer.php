@@ -8,10 +8,13 @@
 
 ?>
 
+<?php
+$is_tr = (get_locale() == "tr_TR");
+?>
 <?php // Common footer content goes here. ?>
-<footer class="footer">
+<footer class="footer" role="contentinfo" aria-label="<?php echo $is_tr ? 'Site alt bilgisi' : 'Site footer'; ?>">
     <div class="container">
-        
+
         <div class="row">
             <div class="col-12">
                 <div class="footer__buttons">
@@ -21,13 +24,16 @@
                   {
                     $menu = get_term( $locations['footer'], 'nav_menu' );
                     $menu_items = wp_get_nav_menu_items($menu->term_id);
-                    foreach( $menu_items as $menu_item ):?>
-                    
+                    foreach( $menu_items as $menu_item ):
+                        $is_external = ($menu_item->target !== "" && $menu_item->target !== "_self");
+                        $external_suffix = $is_external ? ' ' . ($is_tr ? '(yeni pencerede açılır)' : '(opens in a new window)') : '';
+                    ?>
+
                     <div class="footer__buttons--item">
-                        <a href="<?php echo $menu_item->url; ?>" class="btn bordered" <?php echo (($menu_item->target !=="") ? ("target='".$menu_item->target."'") : ""); ?>>
-                            <span class="btn__tooltip"><?php echo $menu_item->title; ?></span>
+                        <a href="<?php echo esc_url($menu_item->url); ?>" class="btn bordered" <?php echo $is_external ? ('target="' . esc_attr($menu_item->target) . '" rel="noopener noreferrer"') : ''; ?> aria-label="<?php echo esc_attr($menu_item->title . $external_suffix); ?>">
+                            <span class="btn__tooltip"><?php echo esc_html($menu_item->title); ?></span>
                             <?php if(get_field('icon', $menu_item)):?>
-                            <span class="btn__icon <?php echo get_field('icon', $menu_item); ?>"></span>
+                            <span class="btn__icon <?php echo esc_attr(get_field('icon', $menu_item)); ?>" aria-hidden="true"></span>
                             <?php endif;?>
                         </a>
                     </div>
@@ -44,28 +50,28 @@
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-12">
-                <?php if(get_locale()=="tr_TR"):?>
+                <?php if($is_tr):?>
                 <div class="footer__contact">
                     <h4>İzmir Yüksek Teknoloji Enstitüsü</h4>
-                    <p><span class="icon-location"></span> Gülbahçe Kampüsü 35430 Urla İzmir Türkiye</p>
-                    <p><span class="icon-phone"></span> +90 232 750 60 00</p>
-                    <p><span class="icon-mail"></span> <a href="mailto:info@iyte.edu.tr">info@iyte.edu.tr</a></p>
+                    <p><span class="icon-location" aria-hidden="true"></span> <span class="screen-reader-text">Adres: </span>Gülbahçe Kampüsü 35430 Urla İzmir Türkiye</p>
+                    <p><span class="icon-phone" aria-hidden="true"></span> <span class="screen-reader-text">Telefon: </span><a href="tel:+902327506000">+90 232 750 60 00</a></p>
+                    <p><span class="icon-mail" aria-hidden="true"></span> <span class="screen-reader-text">E-posta: </span><a href="mailto:info@iyte.edu.tr">info@iyte.edu.tr</a></p>
                 </div>
                 <?php else:?>
                 <div class="footer__contact">
                     <h4>İzmir Institute of Technology</h4>
-                    <p><span class="icon-location"></span> Gülbahçe Kampüsü 35430 Urla İzmir Türkiye</p>
-                    <p><span class="icon-phone"></span> +90 232 750 60 00</p>
-                    <p><span class="icon-mail"></span> <a href="mailto:info@iyte.edu.tr">info@iyte.edu.tr</a></p>
+                    <p><span class="icon-location" aria-hidden="true"></span> <span class="screen-reader-text">Address: </span>Gülbahçe Kampüsü 35430 Urla İzmir Türkiye</p>
+                    <p><span class="icon-phone" aria-hidden="true"></span> <span class="screen-reader-text">Phone: </span><a href="tel:+902327506000">+90 232 750 60 00</a></p>
+                    <p><span class="icon-mail" aria-hidden="true"></span> <span class="screen-reader-text">Email: </span><a href="mailto:info@iyte.edu.tr">info@iyte.edu.tr</a></p>
                 </div>
                 <?php endif;?>
             </div>
             <div class="col-lg-9 col-md-12">
-                <div class="footer__map" id="footer_map">
+                <div class="footer__map" id="footer_map" role="region" aria-label="<?php echo $is_tr ? 'İYTE Kampüs Haritası' : 'İYTE Campus Map'; ?>">
 
                 </div>
             </div>
-            
+
         </div>
         <div class="row">
             <div class="col-12">
