@@ -3,9 +3,9 @@
         <div class="col-lg-4 col-md-12">
             <div class="newsbox etkinlik">
                 <div class="newsbox__header justify-content-between align-items-center">
-                    <h1 class="newsbox__header--title">
+                    <h2 class="newsbox__header--title">
                         Etkinliker
-                    </h1>
+                    </h2>
                     <a href="#" class="newsbox__header--link_all">Tüm Etkinliker</a>
                 </div>
                 <div class="newsbox__container">
@@ -50,9 +50,9 @@
             
             <div class="newsbox duyurular">
                 <div class="newsbox__header justify-content-between align-items-center">
-                    <h1 class="newsbox__header--title">
+                    <h2 class="newsbox__header--title">
                         Duyurular
-                    </h1>
+                    </h2>
                     <a href="#" class="newsbox__header--link_all">Tüm Duyurular</a>
                 </div>
                 <div class="newsbox__container">

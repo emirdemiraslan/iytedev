@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1 class="section-title">
+            <h2 class="section-title">
                 ARAŞTIRMA EKOSİSTEMİ
-            </h1>
+            </h2>
         </div>
     </div>
     <div class="row card-stack justify-content-between align-items-start">
