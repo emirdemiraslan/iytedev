@@ -146,7 +146,8 @@
             $pauseLink.attr('aria-label', t.pause);
             $pauseLi.append($pauseLink);
             if ($pager.length) {
-                $pager.append($pauseLi);
+                // Place at the START of the pager (before the first dot).
+                $pager.prepend($pauseLi);
             }
 
             // Trigger slippry's built-in controls when our keyboard handler
@@ -172,14 +173,17 @@
                 $pauseLi
                     .toggleClass('is-paused', state)
                     .toggleClass('is-playing', !state);
-                // slippry has no public pause API; we suppress auto-advance
-                // by faking hover (slippry pauses on mouseenter by default).
-                if (window.jQuery && $slider.data('sy')) {
+                // Drive slippry's real public API. home.js stashes the
+                // slippry-augmented jQuery instance on window._iyteSlider
+                // because the .startAuto / .stopAuto methods live on that
+                // particular instance, not on a fresh $('#featured_news').
+                var sliderApi = window._iyteSlider;
+                if (sliderApi) {
                     try {
-                        if (state) {
-                            $slider.trigger('mouseenter');
-                        } else {
-                            $slider.trigger('mouseleave');
+                        if (state && typeof sliderApi.stopAuto === 'function') {
+                            sliderApi.stopAuto();
+                        } else if (!state && typeof sliderApi.startAuto === 'function') {
+                            sliderApi.startAuto();
                         }
                     } catch (err) { /* noop */ }
                 }
@@ -190,13 +194,20 @@
                 setPaused(!paused);
             });
 
-            // Pause on focus within carousel
+            // Pause on focus within carousel (uses real slippry API).
             $wrapper.on('focusin', function () {
-                $slider.trigger('mouseenter');
+                var sliderApi = window._iyteSlider;
+                if (sliderApi && typeof sliderApi.stopAuto === 'function') {
+                    sliderApi.stopAuto();
+                }
             });
             $wrapper.on('focusout', function (e) {
-                if (!paused && !$wrapper[0].contains(e.relatedTarget)) {
-                    $slider.trigger('mouseleave');
+                if (paused) { return; }
+                if (!$wrapper[0].contains(e.relatedTarget)) {
+                    var sliderApi = window._iyteSlider;
+                    if (sliderApi && typeof sliderApi.startAuto === 'function') {
+                        sliderApi.startAuto();
+                    }
                 }
             });
 

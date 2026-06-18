@@ -3,24 +3,25 @@ import '../vendor/slippry';
 
 (function($){
     $(document).ready(function(){
-        jQuery('#featured_news').slippry({
+        var $slider = jQuery('#featured_news');
+        $slider.slippry({
             // general elements & wrapper
             slippryWrapper: '<div class="sy-box news-slider" />', // wrapper to wrap everything, including pager
             elements: 'article', // elments cointaining slide content
-    
+
             // options
-            adaptiveHeight: true, // height of the sliders adapts to current 
+            adaptiveHeight: true, // height of the sliders adapts to current
             captions: false,
             //preload:'all',
-    
+
             // pager
             //pagerClass: 'news-pager',
-    
+
             // transitions
             transition: 'horizontal', // fade, horizontal, kenburns, false
             pause: 8000,
             easing:'easeInOutSine',
-    
+
             // slideshow
             autoDirection: 'next',
             onSliderLoad:function(index){
@@ -29,6 +30,9 @@ import '../vendor/slippry';
 
             }
         });
+        // Expose the slippry-augmented jQuery instance so the
+        // accessibility script can call .startAuto() / .stopAuto().
+        window._iyteSlider = $slider;
     });
 })(jQuery);
 
