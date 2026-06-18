@@ -151,6 +151,7 @@ input[type="checkbox"]:focus-visible {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 2px;
         width: 100%;
         height: 100%;
         padding: 0;
@@ -161,26 +162,38 @@ input[type="checkbox"]:focus-visible {
         font-size: 0;
         line-height: 1;
         box-sizing: border-box;
-
-        &::before {
-            display: block;
-            font-size: 10px;
-            line-height: 1;
-            font-weight: bold;
-            text-align: center;
-        }
     }
 
-    &.is-playing a::before {
-        content: "\2225"; // double vertical line (pause)
-        letter-spacing: 2px;
-        padding-left: 2px; // balance the letter-spacing
+    // Playing state -> two vertical bars (pause).
+    // Drawn with ::before and ::after so it doesn't depend on any
+    // specific glyph that the system font may or may not render.
+    &.is-playing a::before,
+    &.is-playing a::after {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 10px;
+        background: #ffffff;
+        border-radius: 1px;
     }
 
+    // Paused state -> single right-pointing triangle (play).
+    // Drawn with CSS borders so it's also font-independent.
+    &.is-paused a {
+        gap: 0;
+    }
     &.is-paused a::before {
-        content: "\25B6"; // right-pointing triangle (play)
-        font-size: 9px;
-        margin-left: 1px; // optical centring for the triangle
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 5px 8px;
+        border-color: transparent transparent transparent #ffffff;
+        margin-left: 2px; // optical centring for the triangle
+    }
+    &.is-paused a::after {
+        content: none;
     }
 
     a:hover,
