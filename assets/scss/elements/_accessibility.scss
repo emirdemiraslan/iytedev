@@ -121,18 +121,31 @@ input[type="checkbox"]:focus-visible {
 
 /* -------------------------------------------------------------------------
  * Manşet slider pause/play toggle.
- * Prepended to slippry's native .sy-pager list as an extra <li>. It uses
- * the same 3px white border as the other pager dots but is slightly
- * larger (24x24 vs 18x18) so the pause/play glyph reads cleanly. The
- * larger box is also vertically realigned to sit on the same midline as
- * the smaller dots — without this override the inline-block baseline
- * shift puts the bigger square below the dots.
+ *
+ * Appended to slippry's native .sy-pager <ul> at the very end of the
+ * DOM list so slippry's updatePager() — which highlights the active
+ * dot via $('.sy-pager li')[active.index()] — keeps the original
+ * 0..N-1 indexing untouched. The pager is switched to flexbox so the
+ * pause <li> can claim order: -1 and *visually* lead the row while
+ * still living after the real dots in DOM order.
+ *
+ * The button shares the same 3px white border as the other dots but
+ * is 24×24 (vs 18×18) so the pause / play glyph reads cleanly inside
+ * the ring. Flex centering on the inner <a> pins the glyph dead
+ * centre regardless of font metrics.
  * ------------------------------------------------------------------------- */
+.sy-pager {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .sy-pager .sy-pause {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin-right: 1em; // keep slippry's 1em spacing between bullets
+    order: -1; // visually first, DOM last
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 1em; // keep slippry's spacing between bullets
 
     a {
         display: flex;
@@ -161,27 +174,19 @@ input[type="checkbox"]:focus-visible {
     &.is-playing a::before {
         content: "\2225"; // double vertical line (pause)
         letter-spacing: 2px;
-        padding-left: 2px; // visual offset to balance letter-spacing
+        padding-left: 2px; // balance the letter-spacing
     }
 
     &.is-paused a::before {
         content: "\25B6"; // right-pointing triangle (play)
         font-size: 9px;
-        margin-left: 1px; // optical centring for triangle
+        margin-left: 1px; // optical centring for the triangle
     }
 
     a:hover,
     a:focus-visible {
         opacity: 1;
     }
-}
-
-/* Realign the original dots so the bigger pause button doesn't drop the
- * row. Setting vertical-align on every li keeps them all on the same
- * midline. Targeting the parent .sy-pager prevents leaking to anything
- * else and keeps specificity minimal. */
-.sy-pager li {
-    vertical-align: middle;
 }
 
 /* -------------------------------------------------------------------------

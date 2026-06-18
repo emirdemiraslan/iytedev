@@ -146,8 +146,12 @@
             $pauseLink.attr('aria-label', t.pause);
             $pauseLi.append($pauseLink);
             if ($pager.length) {
-                // Place at the START of the pager (before the first dot).
-                $pager.prepend($pauseLi);
+                // Append to the END of the pager DOM so slippry's
+                // updatePager() — which uses `$('.sy-pager li')[active.index()]`
+                // to highlight the active dot — keeps the original
+                // 0..N-1 indexing intact. CSS uses flex `order: -1` on
+                // .sy-pause to make it *visually* leading.
+                $pager.append($pauseLi);
             }
 
             // Trigger slippry's built-in controls when our keyboard handler
