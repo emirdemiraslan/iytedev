@@ -132,16 +132,25 @@
             var $live = $('<div class="screen-reader-text" aria-live="polite" aria-atomic="true"></div>');
             $wrapper.append($live);
 
-            // Pause/Play button
-            var paused = false;
-            var $controls = $('<div class="a11y-slider-controls" />');
-            var $prevBtn = $('<button type="button" aria-label="' + t.prev + '">&#x2039;</button>');
-            var $playBtn = $('<button type="button" aria-label="' + t.pause + '" aria-pressed="false">&#x2225;</button>');
-            var $nextBtn = $('<button type="button" aria-label="' + t.next + '">&#x203A;</button>');
-            $controls.append($prevBtn, $playBtn, $nextBtn);
-            $wrapper.css('position', 'relative').append($controls);
+            // Label slippry's native prev/next controls (no visual change).
+            $wrapper.find('.sy-controls .sy-prev a').attr('aria-label', t.prev);
+            $wrapper.find('.sy-controls .sy-next a').attr('aria-label', t.next);
 
-            // Helper: trigger slippry's built-in controls if rendered.
+            // Insert pause/play toggle into slippry's native .sy-pager as an
+            // additional <li>, so it inherits the dot styling already applied
+            // to the pager bullets by the theme/slippry stylesheet.
+            var paused = false;
+            var $pager = $wrapper.find('.sy-pager');
+            var $pauseLi = $('<li class="sy-pause is-playing"></li>');
+            var $pauseLink = $('<a href="#" role="button" aria-pressed="false"></a>');
+            $pauseLink.attr('aria-label', t.pause);
+            $pauseLi.append($pauseLink);
+            if ($pager.length) {
+                $pager.append($pauseLi);
+            }
+
+            // Trigger slippry's built-in controls when our keyboard handler
+            // fires (no custom prev/next buttons rendered).
             function clickInternal(selectorList) {
                 var i;
                 for (i = 0; i < selectorList.length; i++) {
@@ -154,24 +163,17 @@
                 return false;
             }
 
-            $prevBtn.on('click', function () {
-                clickInternal(['.sy-prev', '.sy-controls a.prev', 'a.sy-prev']);
-                announceCurrent();
-            });
-            $nextBtn.on('click', function () {
-                clickInternal(['.sy-next', '.sy-controls a.next', 'a.sy-next']);
-                announceCurrent();
-            });
-
             function setPaused(state) {
                 paused = state;
-                $playBtn.attr({
+                $pauseLink.attr({
                     'aria-pressed': state ? 'true' : 'false',
                     'aria-label': state ? t.play : t.pause
-                }).html(state ? '&#9658;' : '&#x2225;');
+                });
+                $pauseLi
+                    .toggleClass('is-paused', state)
+                    .toggleClass('is-playing', !state);
                 // slippry has no public pause API; we suppress auto-advance
-                // by stopping its internal interval if exposed, else rely
-                // on hover/focus pause (slippry default).
+                // by faking hover (slippry pauses on mouseenter by default).
                 if (window.jQuery && $slider.data('sy')) {
                     try {
                         if (state) {
@@ -183,7 +185,8 @@
                 }
             }
 
-            $playBtn.on('click', function () {
+            $pauseLink.on('click', function (e) {
+                e.preventDefault();
                 setPaused(!paused);
             });
 
@@ -204,10 +207,12 @@
                 }
                 if (e.key === 'ArrowLeft') {
                     e.preventDefault();
-                    $prevBtn.trigger('click');
+                    clickInternal(['.sy-prev a', '.sy-prev', '.sy-controls a.prev']);
+                    announceCurrent();
                 } else if (e.key === 'ArrowRight') {
                     e.preventDefault();
-                    $nextBtn.trigger('click');
+                    clickInternal(['.sy-next a', '.sy-next', '.sy-controls a.next']);
+                    announceCurrent();
                 }
             });
 

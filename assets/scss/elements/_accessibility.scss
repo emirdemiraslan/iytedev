@@ -120,34 +120,46 @@ input[type="checkbox"]:focus-visible {
 }
 
 /* -------------------------------------------------------------------------
- * Slider accessibility controls (pause/play/prev/next buttons).
- * Reuses theme's icon font sizing; small, unobtrusive controls.
- * Position can be customised when the slider markup is finalised.
+ * Manşet slider pause/play toggle.
+ * Lives inside slippry's native .sy-pager list as an extra <li>, so it
+ * picks up the same 18x18 dot styling (theme override: 3px solid #fff
+ * border, transparent fill) as the other pager bullets.
+ *
+ * Only the inner glyph differs — we reveal a pause/play character that
+ * slippry's default `text-indent: -9999px` hides on the other dots.
  * ------------------------------------------------------------------------- */
-.a11y-slider-controls {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    z-index: 50;
-    display: flex;
-    gap: 6px;
-
-    button {
-        width: 36px;
-        height: 36px;
-        padding: 0;
-        background: rgba(0, 0, 0, 0.55);
+.sy-pager .sy-pause {
+    a {
+        text-indent: 0 !important;
+        background: transparent !important;
         color: #ffffff;
-        border: 1px solid rgba(255, 255, 255, 0.35);
-        border-radius: 50%;
-        cursor: pointer;
-        line-height: 1;
-        font-size: 14px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 0;
+        line-height: 12px;
 
-        &:hover,
-        &:focus-visible {
-            background: rgba(0, 0, 0, 0.8);
+        &::before {
+            display: inline-block;
+            font-size: 10px;
+            line-height: 12px;
+            font-weight: bold;
+            vertical-align: middle;
         }
+    }
+
+    &.is-playing a::before {
+        content: "\2225"; // double vertical line (pause)
+        letter-spacing: 1px;
+    }
+
+    &.is-paused a::before {
+        content: "\25B6"; // right-pointing triangle (play)
+        margin-left: 1px; // optical centring
+    }
+
+    a:hover,
+    a:focus-visible {
+        opacity: 1;
     }
 }
 
