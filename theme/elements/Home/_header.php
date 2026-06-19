@@ -32,18 +32,18 @@ $manset = get_posts( $args );
 	?>
 	<article id="news-slug-<?php echo $m->ID;?>" class="featured img-cover" style="background-image:url(<?php echo get_the_post_thumbnail_url($m->ID, 'full')?>)" role="group" aria-roledescription="<?php echo (get_locale()=='tr_TR') ? 'slayt' : 'slide'; ?>" aria-label="<?php echo esc_attr( $slide_label ); ?>">
 
-	<?php if($has_content):?><a href="<?php echo get_the_permalink($m->ID); ?>"><?php endif;?>
+	<?php if($has_content):?><a href="<?php echo get_the_permalink($m->ID); ?>"><span class="screen-reader-text"><?php echo esc_html( $slide_label ); ?></span><?php endif;?>
 			<div class="container">
 				<div class="row justify-content-<?php the_field('yatay_hizalama', $m->ID); ?> align-items-<?php the_field('dikey_hizalama', $m->ID); ?>" >
+					<?php if( have_rows('custom_title', $m->ID) ):?>
 					<h2 class="featured__title hidden-md-down">
-						<?php if( have_rows('custom_title', $m->ID) ):?>
 							<?php while(have_rows('custom_title', $m->ID)): the_row();?>
 								<span><?php the_sub_field('satir'); ?></span><br/>
 							<?php endwhile; ?>
-						<?php endif; ?>
-
-
+							
+							
 					</h2>
+					<?php endif; ?>
 				</div>
 				<div class="featured__mobile--title hidden-lg-up">
 					<?php if( have_rows('custom_title', $m->ID) ):?>
